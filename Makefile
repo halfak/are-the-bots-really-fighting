@@ -14,5 +14,5 @@ datasets/tables/staging.enwiki_reverted_20140820.loaded: \
 		datasets/enwiki_reverted_20140820.tsv
 	mysqlimport --local --ignore-lines=1 $(db_options) \
 	  staging datasets/enwiki_reverted_20140820.tsv; \
-	dbstore -e "SELECT NOW(), COUNT(*) FROM staging.enwiki_reverted_20140820;" > \
+	mysql $(db_options) -e "SELECT NOW(), COUNT(*) FROM staging.enwiki_reverted_20140820;" > \
 	datasets/tables/staging.enwiki_reverted_20140820.loaded
