@@ -1,6 +1,8 @@
 
 db_options = -h analytics-store.eqiad.wmnet -u research
 
+datasets/crosswiki_unified_bot_20170319.tsv: 
+	python get_bots.py > datasets/crosswiki_unified_bot_20170319.tsv
 
 datasets/tables/staging.enwiki_reverted_20140820.created: \
 		sql/staging.enwiki_reverted_20140820.create.sql
@@ -62,3 +64,46 @@ datasets/tables/staging.enwiki_unified_bot_20170315.loaded: \
           staging datasets/enwiki_unified_bot_20170315.tsv; \
 	mysql $(db_options) -e "SELECT NOW(), COUNT(*) FROM staging.enwiki_unified_bot_20170315;" > \
 	datasets/tables/staging.enwiki_unified_bot_20170315.loaded
+
+
+datasets/reverts/dewiki_20161001_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/dewiki/20161001/dewiki-20161001-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/dewiki_20161001_reverts.json.bz2
+
+datasets/reverts/frwiki_20161001_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/frwiki/20161001/frwiki-20161001-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/frwiki_20161001_reverts.json.bz2
+
+datasets/reverts/jawiki_20161001_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/jawiki/20161001/jawiki-20161001-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/jawiki_20161001_reverts.json.bz2
+
+datasets/reverts/eswiki_20161001_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/eswiki/20161001/eswiki-20161001-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/eswiki_20161001_reverts.json.bz2
+
+datasets/reverts/zhwiki_20161001_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/zhwiki/20161001/zhwiki-20161001-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/zhwiki_20161001_reverts.json.bz2
+
+datasets/reverts/ptwiki_20161001_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/ptwiki/20161001/ptwiki-20161001-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/ptwiki_20161001_reverts.json.bz2
