@@ -1,3 +1,44 @@
+def interwiki_confirm(comment, debug=False):
+    """
+    Looks for comments that have a language code in between punctuation
+    
+    Language codes from https://en.wikipedia.org/wiki/List_of_Wikipedias#Wikipedia_edition_codes
+    """
+
+    import string, re
+    
+    with open("lang_codes.tsv", "r") as f:
+        lang_codes = f.read().split("\n")
+        
+    lang_codes.pop() # a blank '' is in the list that gets returned
+    
+    try:
+        comment = str(comment)
+        comment = comment.lower()
+        
+    except Exception as e:
+        return 'other'
+
+    # replace all punctuation with spaces, then split string into list
+    
+    #transtable = str.maketrans(' ', ' ', string.punctuation)  
+    #comment = comment.translate(transtable).split()
+    
+    translator = re.compile('[%s]' % re.escape(string.punctuation))
+    comment = translator.sub(' ', comment).split()
+
+    if debug:
+        print(comment)
+        
+    if any(word in comment for word in lang_codes):
+        return 'interwiki link cleanup -- suspected'
+    else:
+        return 'other'
+    
+    
+    
+    
+
 def comment_categorization(row):
     
     reverting_user = str(row['reverting_user_text'])
@@ -16,6 +57,12 @@ def comment_categorization(row):
  
     if comment == 'nan':
         return "deleted revision"
+    
+    elif comment.find("Undoing massive unnecessary addition of infoboxneeded by a (now blocked) bot") >= 0:
+        return "botfight: infoboxneeded"
+    
+    elif comment_lower.find("commonsdelinker") >=0 and reverting_user.find("CommonsDelinker") == -1:
+        return "botfight: reverting CommonsDelinker"
         
     elif comment.find("Reverted edits by [[Special:Contributions/ImageRemovalBot") >= 0:
         return "botfight: 718bot vs ImageRemovalBot"
@@ -49,7 +96,10 @@ def comment_categorization(row):
     
     elif comment_lower.find("langlinks") >= 0:
         return "interwiki link cleanup"
-        
+    
+    elif comment_lower.find("iw-link") >= 0:
+        return "interwiki link cleanup"
+    
     elif comment_lower.find("changing category") >= 0:
         return "moving category"
     
@@ -98,47 +148,7 @@ def comment_categorization(row):
     elif comment_lower.find("user:mathbot/changes to mathlists") >= 0:
         return "mathbot mathlist updates"
     
-    
-    #   Note: these interwiki links may be a bit broad. They have a country code following
-    #   the first [[, but there are many country codes and I need a better way of searching
-    #   for that.
-    
-    elif comment_lower.find("robot: adding [[") >= 0:
-        return "interwiki link cleanup -- suspected"
-    
-    elif comment_lower.find("robot: modifying [[") >= 0:
-        return "interwiki link cleanup -- suspected"
-    
-    elif comment_lower.find("robot: deleting [[") >= 0:
-        return "interwiki link cleanup -- suspected"  
-    
-    elif comment_lower.find("robot: removing [[") >= 0:
-        return "interwiki link cleanup -- suspected"      
-
-    elif comment_lower.find("robot adding: [[") >= 0:
-        return "interwiki link cleanup -- suspected"
-    
-    elif comment_lower.find("robot modifying: [[") >= 0:
-        return "interwiki link cleanup -- suspected"
-    
-    elif comment_lower.find("robot deleting: [[") >= 0:
-        return "interwiki link cleanup -- suspected"  
-    
-    elif comment_lower.find("robot removing: [[") >= 0:
-        return "interwiki link cleanup -- suspected"      
-    
-    elif comment_lower.find("robot  adding:[[") >= 0:
-        return "interwiki link cleanup -- suspected"
-    
-    elif comment_lower.find("robot  modifying: [[") >= 0:
-        return "interwiki link cleanup -- suspected"
-    
-    elif comment_lower.find("robot  deleting: [[") >= 0:
-        return "interwiki link cleanup -- suspected"  
-    
-    elif comment_lower.find("robot  removing: [[") >= 0:
-        return "interwiki link cleanup -- suspected"    
-    
+        
     elif comment_lower.find("link syntax") >= 0:
         return "link syntax fixing"
     
@@ -148,5 +158,11 @@ def comment_categorization(row):
     elif comment_lower.find(" per") >= 0:
         return "other w/ per justification"  
     
+    elif comment_lower.find("revert") >= 0:
+        return "other w/ revert in comment"  
+    
+    elif comment_lower.find("rv ") >= 0 or comment_lower.find("rv") == 0:
+        return "other w/ revert in comment"  
+    
     else:
-        return "other"
+        return interwiki_confirm(comment)
