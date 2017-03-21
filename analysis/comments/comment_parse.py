@@ -35,7 +35,7 @@ def interwiki_confirm(comment, debug=False):
     
     
     
-    def comment_categorization(row):
+def comment_categorization(row):
     """
     Takes a row from a pandas dataframe or dict and returns a string with a
     kind of activity based on metadata. Used with df.apply(). Mostly parses
@@ -166,3 +166,15 @@ def interwiki_confirm(comment, debug=False):
     
     else:
         return interwiki_confirm(comment)
+
+
+tests_yes = ["Robot adding [[es:Test]]", "adding es:Test", "es", "linking es, it, en"]
+tests_no = ["test", "enes", "discuss policies on enwiki vs eswiki"]
+
+print("Should return interwiki link cleanup --suspected")
+for test in tests_yes:
+    print("\t", interwiki_confirm(test))
+
+print("Should return other")
+for test in tests_no:
+    print("\t", interwiki_confirm(test))
