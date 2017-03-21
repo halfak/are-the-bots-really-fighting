@@ -21,8 +21,6 @@ def interwiki_confirm(comment, debug=False):
 
     # replace all punctuation with spaces, then split string into list
     
-    #transtable = str.maketrans(' ', ' ', string.punctuation)  
-    #comment = comment.translate(transtable).split()
     
     translator = re.compile('[%s]' % re.escape(string.punctuation))
     comment = translator.sub(' ', comment).split()
@@ -37,9 +35,12 @@ def interwiki_confirm(comment, debug=False):
     
     
     
-    
-
-def comment_categorization(row):
+    def comment_categorization(row):
+    """
+    Takes a row from a pandas dataframe or dict and returns a string with a
+    kind of activity based on metadata. Used with df.apply(). Mostly parses
+    comments, but makes some use of usernames too.
+    """
     
     reverting_user = str(row['reverting_user_text'])
     
@@ -147,7 +148,6 @@ def comment_categorization(row):
     
     elif comment_lower.find("user:mathbot/changes to mathlists") >= 0:
         return "mathbot mathlist updates"
-    
         
     elif comment_lower.find("link syntax") >= 0:
         return "link syntax fixing"
