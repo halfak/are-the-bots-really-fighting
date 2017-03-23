@@ -66,12 +66,37 @@ datasets/tables/staging.enwiki_unified_bot_20170315.loaded: \
 	datasets/tables/staging.enwiki_unified_bot_20170315.loaded
 
 
+datasets/reverts/enwiki_20161201_reverts.json.bz2:
+	mwreverts dump2reverts \
+	  /mnt/data/xmldatadumps/public/enwiki/20161201/enwiki-20161201-stub-meta-history*.xml.gz \
+	  --radius 15 --use-sha1 | \
+	bzip2 -c > \
+	datasets/reverts/enwiki_20161201_reverts.json.bz2
+
+datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2: \
+		datasets/reverts/enwiki_20161201_reverts.json.bz2 \
+		datasets/crosswiki_unified_bot_20170319.tsv
+	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	python revert_json_2_tsv.py \
+	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
+	bzip2 -c > \
+	datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2
+
 datasets/reverts/dewiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/dewiki/20161001/dewiki-20161001-stub-meta-history*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/dewiki_20161001_reverts.json.bz2
+
+datasets/dewiki_20161001_reverted_bot2bot.tsv.bz2: \
+		datasets/reverts/dewiki_20161001_reverts.json.bz2 \
+		datasets/crosswiki_unified_bot_20170319.tsv
+	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	python revert_json_2_tsv.py \
+	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
+	bzip2 -c > \
+	datasets/dewiki_20161001_reverted_bot2bot.tsv.bz2
 
 datasets/reverts/frwiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
