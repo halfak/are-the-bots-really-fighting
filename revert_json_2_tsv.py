@@ -91,6 +91,7 @@ def main():
             doc['reverting']['page']['namespace']  # page_namespace
         ])
         sys.stderr.write(".")
+        sys.stderr.flush()
 
     sys.stderr.write("\n")
 
