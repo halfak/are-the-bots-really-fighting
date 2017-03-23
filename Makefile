@@ -2,14 +2,14 @@
 db_options = -h analytics-store.eqiad.wmnet -u research
 
 
-b2b_revert_datasets:
+b2b_revert_datasets: \
+	datasets/frwiki_20161001_reverted_bot2bot.tsv.bz2 \
+	datasets/dewiki_20161001_reverted_bot2bot.tsv.bz2 \
+	datasets/ptwiki_20161001_reverted_bot2bot.tsv.bz2 \
+	datasets/jawiki_20161001_reverted_bot2bot.tsv.bz2 \
+	datasets/zhwiki_20161001_reverted_bot2bot.tsv.bz2 \
+	datasets/eswiki_20161001_reverted_bot2bot.tsv.bz2
 	#datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2 \
-	datasets/frwiki_20161201_reverted_bot2bot.tsv.bz2 \
-	datasets/dewiki_20161201_reverted_bot2bot.tsv.bz2 \
-	datasets/ptwiki_20161201_reverted_bot2bot.tsv.bz2 \
-	datasets/jawiki_20161201_reverted_bot2bot.tsv.bz2 \
-	datasets/zhwiki_20161201_reverted_bot2bot.tsv.bz2 \
-	datasets/eswiki_20161201_reverted_bot2bot.tsv.bz2
 
 datasets/crosswiki_category_bot_20170319.tsv:
 	python get_category_bots.py > datasets/crosswiki_category_bot_20170319.tsv
