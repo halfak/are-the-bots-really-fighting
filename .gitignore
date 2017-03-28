@@ -10,6 +10,7 @@ __pycache__/
 *.loaded
 *.gz
 *.bz2
+datasets/
 
 # C extensions
 *.so
