@@ -16,9 +16,10 @@ datasets/crosswiki_category_bot_20170319.tsv:
 datasets/crosswiki_unified_bot_20170319.tsv: \
 		datasets/crosswiki_category_bot_20170319.tsv
 	# From https://quarry.wmflabs.org/query/17557
-	wget https://quarry.wmflabs.org/run/164750/output/0/tsv?download=true -qO- | \
-	tail -n+2 | \
-	cat - datasets/crosswiki_category_bot_20170319.tsv | sort | uniq > \
+	( \
+	  wget https://quarry.wmflabs.org/run/164750/output/0/tsv?download=true -qO- | tail -n+2; \
+	  cat datasets/crosswiki_category_bot_20170319.tsv; \
+	) | sort | uniq > \
 	datasets/crosswiki_unified_bot_20170319.tsv
 
 
