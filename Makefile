@@ -67,7 +67,7 @@ datasets/reverts/frwiki_20161001_reverts.json.bz2:
 datasets/frwiki_20161001_reverted_bot2bot.tsv.bz2: \
 		datasets/reverts/frwiki_20161001_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	bzcat datasets/reverts/frwiki_20161001_reverts.json.bz2 | \
 	python revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
 	bzip2 -c > \
@@ -83,7 +83,7 @@ datasets/reverts/jawiki_20161001_reverts.json.bz2:
 datasets/jawiki_20161001_reverted_bot2bot.tsv.bz2: \
 		datasets/reverts/jawiki_20161001_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	bzcat datasets/reverts/jawiki_20161001_reverts.json.bz2 | \
 	python revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
 	bzip2 -c > \
@@ -99,7 +99,7 @@ datasets/reverts/eswiki_20161001_reverts.json.bz2:
 datasets/eswiki_20161001_reverted_bot2bot.tsv.bz2: \
 		datasets/reverts/eswiki_20161001_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	bzcat datasets/reverts/eswiki_20161001_reverts.json.bz2 | \
 	python revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
 	bzip2 -c > \
@@ -115,7 +115,7 @@ datasets/reverts/zhwiki_20161001_reverts.json.bz2:
 datasets/zhwiki_20161001_reverted_bot2bot.tsv.bz2: \
 		datasets/reverts/zhwiki_20161001_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	bzcat datasets/reverts/zhwiki_20161001_reverts.json.bz2 | \
 	python revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
 	bzip2 -c > \
@@ -131,7 +131,7 @@ datasets/reverts/ptwiki_20161001_reverts.json.bz2:
 datasets/ptwiki_20161001_reverted_bot2bot.tsv.bz2: \
 		datasets/reverts/ptwiki_20161001_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
+	bzcat datasets/reverts/ptwiki_20161001_reverts.json.bz2 | \
 	python revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
 	bzip2 -c > \
