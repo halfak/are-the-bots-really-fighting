@@ -42,6 +42,7 @@ def main():
         "reverting_deleted",
         "reverting_parent_id",
         "reverting_archived",
+        "reverting_comment",
         "rev_revert_offset",
         "revisions_reverted",
         "reverted_to_rev_id",
@@ -85,6 +86,7 @@ def main():
             doc['reverting']['deleted']['text'],  # reverting_deleted
             doc['reverting'].get('parent_id'),  # reverting_parent_id
             False,  # reverting_archived
+            doc['reverting'].get('comment', '-'),  # reverting_comment
             len(doc['reverteds']),  # rev_revert_offset
             len(doc['reverteds']),  # revisions_reverted
             doc['reverted_to']['id'],  # reverted_to_rev_id
