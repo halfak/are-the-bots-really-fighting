@@ -1,4 +1,4 @@
-def interwiki_confirm(str comment):
+def interwiki_confirm(comment):
     """
     Takes a comment string, searches for language codes bordered by 
     two punctuation marks from [](){},: or one punctuation mark and
@@ -95,12 +95,18 @@ def comment_categorization(row):
 
     elif comment_lower.find("has been moved; it now redirects to") >= 0:
         return "fixing double redirect"
+    
+    elif comment_lower.find("correction du redirect") >= 0:
+        return "fixing double redirect"   
         
     elif comment_lower.find("redirect tagging") >= 0:
         return "redirect tagging/sorting"
     
     elif comment_lower.find("sorting redirect") >= 0:
         return "redirect tagging/sorting"
+    
+    elif comment_lower.find("redirecciones") >= 0 and comment_lower.find("categoría") >= 0:
+        return "category redirect cleanup"    
     
     elif comment_lower.find("change redirected category") >= 0:
         return "category redirect cleanup"
@@ -132,6 +138,9 @@ def comment_categorization(row):
     elif comment_lower.find("re-categorisation") >= 0:
         return "moving category"
     
+    elif comment_lower.find("recatégorisation") >= 0:
+        return "moving category"    
+        
     elif comment_lower.find("removing a protection template") >= 0:
         return "protection template cleanup"
     
@@ -151,6 +160,9 @@ def comment_categorization(row):
         return "orphan template cleanup"
     
     elif comment_lower.find("non-applicable orphan") >= 0:
+        return "orphan template cleanup"
+    
+    elif comment_lower.find("plantilla") >= 0 and comment_lower.find("huérfano") >= 0:
         return "orphan template cleanup"
     
     elif comment_lower.find("removed orphan t") >= 0:
@@ -174,8 +186,17 @@ def comment_categorization(row):
     elif comment_lower.find("links syntax") >= 0:
         return "link syntax fixing" 
     
-    elif comment_lower.find(" per") >= 0:
-        return "other w/ per justification"  
+    elif comment_lower.find(" per ") >= 0:
+        return "has per justification"  
+    
+    elif comment_lower.find(" según") >= 0:
+        return "has per justification"      
+ 
+    elif comment_lower.find("suite à discussion") >= 0:
+        return "has per justification"  
+    
+    elif comment_lower.find("suite à conservation") >= 0:
+        return "has per justification"     
     
     elif comment_lower.find("revert") >= 0:
         return "other w/ revert in comment"  
@@ -188,7 +209,10 @@ def comment_categorization(row):
     
     elif comment.find("言語間") >=0:
         return "interwiki link cleanup"
-    
+        
+    elif comment_lower.find("interproyecto") >=0:
+        return "interwiki link cleanup"    
+        
     elif comment.find("语言链接") >=0:
         return "interwiki link cleanup"  
     
@@ -197,22 +221,33 @@ def comment_categorization(row):
 
     elif comment.find("二重リダイレクト") >=0:
         return "fixing double redirect"  
-
-    elif comment.lower().find("doble redirección") >=0 or comment.lower().find("redirección doble") >= 0:
+    
+    elif comment_lower.find("doppelten redirect") >=0:
         return "fixing double redirect"  
-
-    elif comment.lower().find("duplo redirecionamento") >=0:
+    
+    elif comment_lower.find("doppelte weiterleitung") >=0:
         return "fixing double redirect"      
     
-    elif comment.lower().find("suppression bandeau") >= 0:
+    elif comment_lower.find("redirectauflösung") >=0:
+        return "fixing double redirect"      
+    
+    elif comment_lower.find("doble redirección") >=0 or comment_lower.find("redirección doble") >= 0:
+        return "fixing double redirect"  
+    
+    elif comment_lower.find("redireccionamento duplo") >=0:
+        return "fixing double redirect"  
+
+    elif comment_lower.find("duplo redirecionamento") >=0:
+        return "fixing double redirect"      
+    
+    elif comment_lower.find("suppression bandeau") >= 0:
         return "template cleanup"
     
-    elif comment.lower().find("archiviert") >= 0:
+    elif comment_lower.find("archiviert") >= 0:
         return "archiving"
     
     else:
         return interwiki_confirm(comment)
-    
 
 # by http://stackoverflow.com/questions/14596884/remove-text-between-and-in-python
 
