@@ -187,10 +187,10 @@ def comment_categorization(row):
         return "interwiki link cleanup"
     
     elif comment.find("言語間") >=0:
-        return "interwiki"
+        return "interwiki link cleanup"
     
     elif comment.find("语言链接") >=0:
-        return "interwiki"  
+        return "interwiki link cleanup"  
     
     elif comment.find("双重重定向") >=0 or comment.find("雙重重定向") >= 0:
         return "fixing double redirect"   
