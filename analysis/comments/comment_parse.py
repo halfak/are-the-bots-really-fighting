@@ -1,10 +1,10 @@
-def interwiki_confirm(comment, debug=False):
+def interwiki_confirm(str comment):
     """
-    Looks for comments that have a language code in between punctuation
-    
-    Language codes from https://en.wikipedia.org/wiki/List_of_Wikipedias#Wikipedia_edition_codes
+    Takes a comment string, searches for language codes bordered by 
+    two punctuation marks from [](){},: or one punctuation mark and
+    one space. Beginning and end of a comment string counts as a
+    space, not a punctuation mark.
     """
-
     import string, re
     
     with open("lang_codes.tsv", "r") as f:
@@ -15,26 +15,45 @@ def interwiki_confirm(comment, debug=False):
     try:
         comment = str(comment)
         comment = comment.lower()
+        comment = " " + comment + " "  # pad start and end of string with non-punctuation
         
     except Exception as e:
         return 'other'
-
-    # replace all punctuation with spaces, then split string into list
     
-    
-    translator = re.compile('[%s]' % re.escape(string.punctuation))
-    comment = translator.sub(' ', comment).split()
-
-    if debug:
-        print(comment)
+    for lang_code in lang_codes:
         
-    if any(word in comment for word in lang_codes):
-        return 'interwiki link cleanup -- suspected'
-    else:
-        return 'other'
+        lang_code_pos = comment.find(lang_code)
+        lang_code_len = len(lang_code)
+        
+        char_before = " "
+        char_after = " "
+        
+        if lang_code_pos >= 0:
+            char_before = comment[lang_code_pos-1]
+        
+            #print("Char before: '", char_before, "'", sep='')
+             
+            char_after = comment[lang_code_pos+lang_code_len]
+
+            #print("Char after: '", char_after, "'", sep='')
+            
+            if char_before in string.punctuation and char_after in "[]{}(),:":
+                #print(lang_code)
+                return 'interwiki link cleanup -- suspected'
+            
+            elif char_before in string.punctuation and char_after == "[]{}(),:":
+                #print(lang_code)
+                return 'interwiki link cleanup -- suspected'
+            
+            elif char_before == " " and char_after in "[]{}(),:":
+                #print(lang_code)
+                return 'interwiki link cleanup -- suspected'
+
+
+               
+    return 'other'
     
-    
-    
+
 def comment_categorization(row):
     """
     Takes a row from a pandas dataframe or dict and returns a string with a
@@ -49,7 +68,7 @@ def comment_categorization(row):
         return 'AIV helperbot'
     
     try:
-        comment = str(row['rev_comment'])
+        comment = str(row['reverting_comment'])
     except Exception as e:
         return 'other'
     
@@ -164,17 +183,69 @@ def comment_categorization(row):
     elif comment_lower.find("rv ") >= 0 or comment_lower.find("rv") == 0:
         return "other w/ revert in comment"  
     
+    elif comment_lower.find("wikidata") >= 0:
+        return "interwiki link cleanup"
+    
+    elif comment.find("言語間") >=0:
+        return "interwiki"
+    
+    elif comment.find("语言链接") >=0:
+        return "interwiki"  
+    
+    elif comment.find("双重重定向") >=0 or comment.find("雙重重定向") >= 0:
+        return "fixing double redirect"   
+
+    elif comment.find("二重リダイレクト") >=0:
+        return "fixing double redirect"  
+
+    elif comment.lower().find("doble redirección") >=0 or comment.lower().find("redirección doble") >= 0:
+        return "fixing double redirect"  
+
+    elif comment.lower().find("duplo redirecionamento") >=0:
+        return "fixing double redirect"      
+    
+    elif comment.lower().find("suppression bandeau") >= 0:
+        return "template cleanup"
+    
+    elif comment.lower().find("archiviert") >= 0:
+        return "archiving"
+    
     else:
         return interwiki_confirm(comment)
+    
 
+# by http://stackoverflow.com/questions/14596884/remove-text-between-and-in-python
 
-tests_yes = ["Robot adding [[es:Test]]", "adding es:Test", "es", "linking es, it, en"]
-tests_no = ["test", "enes", "discuss policies on enwiki vs eswiki"]
-
-print("Should return interwiki link cleanup --suspected")
-for test in tests_yes:
-    print("\t", interwiki_confirm(test))
-
-print("Should return other")
-for test in tests_no:
-    print("\t", interwiki_confirm(test))
+def remove_brackets(str test_str):
+    """
+    Takes a string and returns that string with text in brackets and parentheses removed
+    """
+    
+    test_str = str(test_str)
+    ret = ''
+    skip1c = 0
+    skip2c = 0
+    for i in test_str:
+        if i == '[':
+            skip1c += 1
+        elif i == '(':
+            skip2c += 1
+        elif i == ']' and skip1c > 0:
+            skip1c -= 1
+        elif i == ')'and skip2c > 0:
+            skip2c -= 1
+        elif skip1c == 0 and skip2c == 0:
+            ret += i
+            
+    return " ".join(ret.split())
+    
+    
+def namespace_type(item):
+    if int(item) == 0:
+        return 'article'
+    elif int(item) == 14:
+        return 'category'
+    elif int(item) % 2 == 1:
+        return 'other talk'
+    else:
+        return 'other page'
