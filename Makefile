@@ -17,6 +17,15 @@ monthly_stats_datasets: \
 	datasets/eswiki_20161001_bot_monthly_revert_stats.tsv
 	datasets/enwiki_20161201_bot_monthly_revert_stats.tsv
 
+monthly_stats_datasets: \
+	datasets/frwiki_20170420_bot_monthly_revert_stats.tsv \
+	datasets/dewiki_20170420_bot_monthly_revert_stats.tsv \
+	datasets/ptwiki_20170420_bot_monthly_revert_stats.tsv \
+	datasets/jawiki_20170420_bot_monthly_revert_stats.tsv \
+	datasets/zhwiki_20170420_bot_monthly_revert_stats.tsv \
+	datasets/eswiki_20170420_bot_monthly_revert_stats.tsv \
+	datasets/enwiki_20170420_bot_monthly_revert_stats.tsv
+
 ############### Bot username datasets ####################
 
 datasets/crosswiki_category_bot_20170319.tsv:
@@ -60,55 +69,44 @@ datasets/zhwiki_monthly_bot_edits_20170427.tsv:
 
 ############### Revert datasets ################
 
-datasets/reverts/enwiki_20161201_reverts.json.bz2:
-	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/enwiki/20161201/enwiki-20161201-stub-meta-history?*.xml.gz \
-	  --radius 15 --use-sha1 | \
-	bzip2 -c > \
-	datasets/reverts/enwiki_20161201_reverts.json.bz2
+datasets/enwiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/enwiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/enwiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/enwiki_20170420_bot_monthly_revert_stats.tsv
 
-datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2: \
-		datasets/reverts/enwiki_20161201_reverts.json.bz2 \
-		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/enwiki_20161201_reverts.json.bz2 | \
-	python revert_json_2_tsv.py \
-	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
-	bzip2 -c > \
-	datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2
-
-datasets/reverts/dewiki_20161001_reverts.json.bz2:
+datasets/reverts/dewiki_20170420_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/dewiki/20161001/dewiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/dewiki_20161001_reverts.json.bz2
 
-datasets/dewiki_20161001_reverted_bot2bot.tsv.bz2: \
-		datasets/reverts/dewiki_20161001_reverts.json.bz2 \
-		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/dewiki_20161001_reverts.json.bz2 | \
-	python revert_json_2_tsv.py \
-	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
-	bzip2 -c > \
-	datasets/dewiki_20161001_reverted_bot2bot.tsv.bz2
+datasets/dewiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/dewiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/dewiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/dewiki_20170420_bot_monthly_revert_stats.tsv
 
-datasets/reverts/frwiki_20161001_reverts.json.bz2:
+
+datasets/reverts/frwiki_20170420_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/frwiki/20161001/frwiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/frwiki_20161001_reverts.json.bz2
 
-datasets/frwiki_20161001_reverted_bot2bot.tsv.bz2: \
-		datasets/reverts/frwiki_20161001_reverts.json.bz2 \
-		datasets/crosswiki_unified_bot_20170319.tsv
-	bzcat datasets/reverts/frwiki_20161001_reverts.json.bz2 | \
-	python revert_json_2_tsv.py \
-	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
-	bzip2 -c > \
-	datasets/frwiki_20161001_reverted_bot2bot.tsv.bz2
+datasets/frwiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/frwiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/frwiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/frwiki_20170420_bot_monthly_revert_stats.tsv
 
-datasets/reverts/jawiki_20161001_reverts.json.bz2:
+
+datasets/reverts/jawiki_20170420_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/jawiki/20161001/jawiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
@@ -124,7 +122,14 @@ datasets/jawiki_20161001_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/jawiki_20161001_reverted_bot2bot.tsv.bz2
 
-datasets/reverts/eswiki_20161001_reverts.json.bz2:
+datasets/jawiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/jawiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/jawiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/jawiki_20170420_bot_monthly_revert_stats.tsv
+
+datasets/reverts/eswiki_20170420_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/eswiki/20161001/eswiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
@@ -140,7 +145,14 @@ datasets/eswiki_20161001_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/eswiki_20161001_reverted_bot2bot.tsv.bz2
 
-datasets/reverts/zhwiki_20161001_reverts.json.bz2:
+datasets/eswiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/eswiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/eswiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/eswiki_20170420_bot_monthly_revert_stats.tsv
+
+datasets/reverts/zhwiki_20170420_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/zhwiki/20161001/zhwiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
@@ -156,7 +168,14 @@ datasets/zhwiki_20161001_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/zhwiki_20161001_reverted_bot2bot.tsv.bz2
 
-datasets/reverts/ptwiki_20161001_reverts.json.bz2:
+datasets/zhwiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/zhwiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/zhwiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/zhwiki_20170420_bot_monthly_revert_stats.tsv
+
+datasets/reverts/ptwiki_20170420_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/ptwiki/20161001/ptwiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
@@ -170,4 +189,11 @@ datasets/ptwiki_20161001_reverted_bot2bot.tsv.bz2: \
 	python revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170319.tsv | \
 	bzip2 -c > \
-	datasets/ptwiki_20161001_reverted_bot2bot.tsv.bz2
+	datasets/ptwiki_20170420_reverted_bot2bot.tsv.bz2
+
+datasets/ptwiki_20170420_bot_monthly_revert_stats.tsv: \
+		datasets/reverts/ptwiki_20170420_reverts.json.bz2
+	bzcat datasets/reverts/ptwiki_20170420_reverts.json.bz2 | \
+	python bot_revert_monthly_stats.py \
+	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
+	datasets/ptwiki_20170420_bot_monthly_revert_stats.tsv

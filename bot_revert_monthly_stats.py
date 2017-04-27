@@ -30,14 +30,14 @@ def main():
         "bot2bot_reverts"
     ]
 
-    if args['--users']:
+    if args['--bots']:
         bots = {u.strip() for u in open(args['--bots'])}
     else:
         bots = None
 
     writer = mysqltsv.Writer(sys.stdout, headers=HEADINGS)
 
-    nmc = defaultdict(defaultdict(int))
+    nmc = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
 
     for doc in (json.loads(l) for l in sys.stdin):
         reverted_username = doc['reverteds'][-1].get('user', {}).get('text')
