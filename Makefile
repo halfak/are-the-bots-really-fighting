@@ -8,6 +8,15 @@ b2b_revert_datasets: \
 	datasets/eswiki_20161001_reverted_bot2bot.tsv.bz2 \
 	datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2
 
+monthly_stats_datasets: \
+	datasets/frwiki_20161001_bot_monthly_revert_stats.tsv \
+	datasets/dewiki_20161001_bot_monthly_revert_stats.tsv \
+	datasets/ptwiki_20161001_bot_monthly_revert_stats.tsv \
+	datasets/jawiki_20161001_bot_monthly_revert_stats.tsv \
+	datasets/zhwiki_20161001_bot_monthly_revert_stats.tsv \
+	datasets/eswiki_20161001_bot_monthly_revert_stats.tsv
+	datasets/enwiki_20161201_bot_monthly_revert_stats.tsv
+
 ############### Bot username datasets ####################
 
 datasets/crosswiki_category_bot_20170319.tsv:
@@ -22,12 +31,38 @@ datasets/crosswiki_unified_bot_20170319.tsv: \
 	) | sort | uniq > \
 	datasets/crosswiki_unified_bot_20170319.tsv
 
+############### Bot activity ###################
+
+# https://quarry.wmflabs.org/query/18263
+datasets/enwiki_monthly_bot_edits_20170427.tsv:
+	wget ???.tsv -qO- > \
+	datasets/enwiki_monthly_bot_edits_20170427.tsv
+
+# https://quarry.wmflabs.org/query/18265
+datasets/dewiki_monthly_bot_edits_20170427.tsv:
+	wget https://quarry.wmflabs.org/run/171700/output/0/tsv?download=true -qO- > \
+	datasets/dewiki_monthly_bot_edits_20170427.tsv
+datasets/frwiki_monthly_bot_edits_20170427.tsv:
+	wget https://quarry.wmflabs.org/run/171700/output/3/tsv?download=true -qO- > \
+	datasets/frwiki_monthly_bot_edits_20170427.tsv
+datasets/eswiki_monthly_bot_edits_20170427.tsv:
+	wget https://quarry.wmflabs.org/run/171700/output/2/tsv?download=true -qO- > \
+	datasets/eswiki_monthly_bot_edits_20170427.tsv
+datasets/ptwiki_monthly_bot_edits_20170427.tsv:
+	wget https://quarry.wmflabs.org/run/171700/output/1/tsv?download=true -qO- > \
+	datasets/ptwiki_monthly_bot_edits_20170427.tsv
+datasets/jawiki_monthly_bot_edits_20170427.tsv:
+	wget https://quarry.wmflabs.org/run/171700/output/5/tsv?download=true -qO- > \
+	datasets/jawiki_monthly_bot_edits_20170427.tsv
+datasets/zhwiki_monthly_bot_edits_20170427.tsv:
+	wget https://quarry.wmflabs.org/run/171700/output/4/tsv?download=true -qO- > \
+	datasets/zhwiki_monthly_bot_edits_20170427.tsv
 
 ############### Revert datasets ################
 
 datasets/reverts/enwiki_20161201_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/enwiki/20170420/enwiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/enwiki/20161201/enwiki-20161201-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/enwiki_20161201_reverts.json.bz2
@@ -43,7 +78,7 @@ datasets/enwiki_20161201_reverted_bot2bot.tsv.bz2: \
 
 datasets/reverts/dewiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/dewiki/20170420/dewiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/dewiki/20161001/dewiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/dewiki_20161001_reverts.json.bz2
@@ -59,7 +94,7 @@ datasets/dewiki_20161001_reverted_bot2bot.tsv.bz2: \
 
 datasets/reverts/frwiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/frwiki/20170420/frwiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/frwiki/20161001/frwiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/frwiki_20161001_reverts.json.bz2
@@ -75,7 +110,7 @@ datasets/frwiki_20161001_reverted_bot2bot.tsv.bz2: \
 
 datasets/reverts/jawiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/jawiki/20170420/jawiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/jawiki/20161001/jawiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/jawiki_20161001_reverts.json.bz2
@@ -91,7 +126,7 @@ datasets/jawiki_20161001_reverted_bot2bot.tsv.bz2: \
 
 datasets/reverts/eswiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/eswiki/20170420/eswiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/eswiki/20161001/eswiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/eswiki_20161001_reverts.json.bz2
@@ -107,7 +142,7 @@ datasets/eswiki_20161001_reverted_bot2bot.tsv.bz2: \
 
 datasets/reverts/zhwiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/zhwiki/20170420/zhwiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/zhwiki/20161001/zhwiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/zhwiki_20161001_reverts.json.bz2
@@ -123,7 +158,7 @@ datasets/zhwiki_20161001_reverted_bot2bot.tsv.bz2: \
 
 datasets/reverts/ptwiki_20161001_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/ptwiki/20170420/ptwiki-20170420-stub-meta-history?*.xml.gz \
+	  /mnt/data/xmldatadumps/public/ptwiki/20161001/ptwiki-20161001-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 | \
 	bzip2 -c > \
 	datasets/reverts/ptwiki_20161001_reverts.json.bz2
