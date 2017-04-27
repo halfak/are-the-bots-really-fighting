@@ -1,27 +1,42 @@
+
+dump_date=20170402
+
+################################################################################
+#######################      figures       #####################################
+################################################################################
+
+figures: datasets
+	ipython analysis/figures/basic_stats.ipynb && \
+	ipython analysis/figures/comment_analysis.ipynb && \
+	ipython analysis/figures/article_bot-pairs.ipynb && \
+	ipython analysis/figures/article_bot-pairs.ipynb
+
+################################################################################
+####################      Datasets       #######################################
+################################################################################
+
+
 datasets: \
 	b2b_revert_datasets \
 	monthly_stats_datasets
 
-
 b2b_revert_datasets: \
-	datasets/frwiki_reverted_bot2bot.tsv.bz2 \
-	datasets/dewiki_reverted_bot2bot.tsv.bz2 \
-	datasets/ptwiki_reverted_bot2bot.tsv.bz2 \
-	datasets/jawiki_reverted_bot2bot.tsv.bz2 \
-	datasets/zhwiki_reverted_bot2bot.tsv.bz2 \
-	datasets/eswiki_reverted_bot2bot.tsv.bz2 \
-	datasets/enwiki_reverted_bot2bot.tsv.bz2
+	datasets/frwiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
+	datasets/dewiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
+	datasets/ptwiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
+	datasets/jawiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
+	datasets/zhwiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
+	datasets/eswiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
+	datasets/enwiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
 monthly_stats_datasets: \
-	datasets/frwiki_bot_monthly_revert_stats.tsv \
-	datasets/dewiki_bot_monthly_revert_stats.tsv \
-	datasets/ptwiki_bot_monthly_revert_stats.tsv \
+	datasets/frwiki_$(dump_date)_bot_monthly_revert_stats.tsv \
+	datasets/dewiki_$(dump_date)_bot_monthly_revert_stats.tsv \
+	datasets/ptwiki_$(dump_date)_bot_monthly_revert_stats.tsv \
 	datasets/jawiki_$(dump_date)_bot_monthly_revert_stats.tsv \
 	datasets/zhwiki_$(dump_date)_bot_monthly_revert_stats.tsv \
 	datasets/eswiki_$(dump_date)_bot_monthly_revert_stats.tsv
 	datasets/enwiki_$(dump_date)_bot_monthly_revert_stats.tsv
-
-dump_date=20170402
 
 ############### Bot username datasets ####################
 
