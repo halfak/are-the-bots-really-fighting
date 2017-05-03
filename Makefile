@@ -1,15 +1,5 @@
 
-dump_date=20170402
-
-################################################################################
-#######################      figures       #####################################
-################################################################################
-
-figures: datasets
-	ipython analysis/figures/basic_stats.ipynb && \
-	ipython analysis/figures/comment_analysis.ipynb && \
-	ipython analysis/figures/article_bot-pairs.ipynb && \
-	ipython analysis/figures/article_bot-pairs.ipynb
+dump_date=20170420
 
 ################################################################################
 ####################      Datasets       #######################################
@@ -17,10 +7,11 @@ figures: datasets
 
 
 datasets: \
-	b2b_revert_datasets \
-	monthly_stats_datasets
+	reverted_bot2bot_datasets \
+	monthly_bot_revert_datasets \
+	monthly_bot_edit_datasets
 
-b2b_revert_datasets: \
+reverted_bot2bot_datasets: \
 	datasets/frwiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
 	datasets/dewiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
 	datasets/ptwiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
@@ -29,14 +20,23 @@ b2b_revert_datasets: \
 	datasets/eswiki_$(dump_date)_reverted_bot2bot.tsv.bz2 \
 	datasets/enwiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-monthly_stats_datasets: \
-	datasets/frwiki_$(dump_date)_bot_monthly_revert_stats.tsv \
-	datasets/dewiki_$(dump_date)_bot_monthly_revert_stats.tsv \
-	datasets/ptwiki_$(dump_date)_bot_monthly_revert_stats.tsv \
-	datasets/jawiki_$(dump_date)_bot_monthly_revert_stats.tsv \
-	datasets/zhwiki_$(dump_date)_bot_monthly_revert_stats.tsv \
-	datasets/eswiki_$(dump_date)_bot_monthly_revert_stats.tsv
-	datasets/enwiki_$(dump_date)_bot_monthly_revert_stats.tsv
+monthly_bot_revert_datasets: \
+	datasets/frwiki_$(dump_date)_monthly_bot_reverts.tsv \
+	datasets/dewiki_$(dump_date)_monthly_bot_reverts.tsv \
+	datasets/ptwiki_$(dump_date)_monthly_bot_reverts.tsv \
+	datasets/jawiki_$(dump_date)_monthly_bot_reverts.tsv \
+	datasets/zhwiki_$(dump_date)_monthly_bot_reverts.tsv \
+	datasets/eswiki_$(dump_date)_monthly_bot_reverts.tsv \
+	datasets/enwiki_$(dump_date)_monthly_bot_reverts.tsv
+
+monthly_bot_edit_datasets: \
+	datasets/frwiki_20170427_monthly_bot_edits.tsv \
+	datasets/dewiki_20170427_monthly_bot_edits.tsv \
+	datasets/ptwiki_20170427_monthly_bot_edits.tsv \
+	datasets/jawiki_20170427_monthly_bot_edits.tsv \
+	datasets/zhwiki_20170427_monthly_bot_edits.tsv \
+	datasets/eswiki_20170427_monthly_bot_edits.tsv \
+	datasets/enwiki_20170427_monthly_bot_edits.tsv
 
 ############### Bot username datasets ####################
 
@@ -55,38 +55,39 @@ datasets/crosswiki_unified_bot_20170319.tsv: \
 ############### Bot activity ###################
 
 # https://quarry.wmflabs.org/query/18263
-datasets/enwiki_monthly_bot_edits_20170427.tsv:
-	wget ???.tsv -qO- > \
-	datasets/enwiki_monthly_bot_edits_20170427.tsv
+# datasets/enwiki_monthly_bot_edits_20170427.tsv:
+#	wget ???.tsv -qO- > \
+#	datasets/enwiki_monthly_bot_edits_20170427.tsv
+# This dataset was generated using a long-running query
 
 # https://quarry.wmflabs.org/query/18265
-datasets/dewiki_monthly_bot_edits_20170427.tsv:
+datasets/dewiki_20170427_monthly_bot_edits.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/0/tsv?download=true -qO- > \
-	datasets/dewiki_monthly_bot_edits_20170427.tsv
-datasets/frwiki_monthly_bot_edits_20170427.tsv:
+	datasets/dewiki_20170427_monthly_bot_edits.tsv
+datasets/frwiki_20170427_monthly_bot_edits.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/3/tsv?download=true -qO- > \
-	datasets/frwiki_monthly_bot_edits_20170427.tsv
-datasets/eswiki_monthly_bot_edits_20170427.tsv:
+	datasets/frwiki_20170427_monthly_bot_edits.tsv
+datasets/eswiki_20170427_monthly_bot_edits.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/2/tsv?download=true -qO- > \
-	datasets/eswiki_monthly_bot_edits_20170427.tsv
-datasets/ptwiki_monthly_bot_edits_20170427.tsv:
+	datasets/eswiki_20170427_monthly_bot_edits.tsv
+datasets/ptwiki_20170427_monthly_bot_edits.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/1/tsv?download=true -qO- > \
-	datasets/ptwiki_monthly_bot_edits_20170427.tsv
-datasets/jawiki_monthly_bot_edits_20170427.tsv:
+	datasets/ptwiki_20170427_monthly_bot_edits.tsv
+datasets/jawiki_20170427_monthly_bot_edits.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/5/tsv?download=true -qO- > \
-	datasets/jawiki_monthly_bot_edits_20170427.tsv
-datasets/zhwiki_monthly_bot_edits_20170427.tsv:
+	datasets/jawiki_20170427_monthly_bot_edits.tsv
+datasets/zhwiki_20170427_monthly_bot_edits.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/4/tsv?download=true -qO- > \
-	datasets/zhwiki_monthly_bot_edits_20170427.tsv
+	datasets/zhwiki_20170427_monthly_bot_edits.tsv
 
 ############### Revert datasets ################
 
-datasets/reverts/enwiki_reverts.json.bz2:
+datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
 	  /mnt/data/xmldatadumps/public/enwiki/$(dump_date)/enwiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
-	datasets/reverts/enwiki_reverts.json.bz2
+	datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2
 
 datasets/enwiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 		datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2 \
@@ -97,12 +98,12 @@ datasets/enwiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/enwiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/enwiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/enwiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/enwiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/enwiki_$(dump_date)_monthly_bot_reverts.tsv
 
 datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
@@ -120,12 +121,12 @@ datasets/dewiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/dewiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/dewiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/dewiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/dewiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/dewiki_$(dump_date)_monthly_bot_reverts.tsv
 
 
 datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2:
@@ -144,12 +145,12 @@ datasets/frwiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/frwiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/frwiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/frwiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/frwiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/frwiki_$(dump_date)_monthly_bot_reverts.tsv
 
 
 datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2:
@@ -168,12 +169,12 @@ datasets/jawiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/jawiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/jawiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/jawiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/jawiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/jawiki_$(dump_date)_monthly_bot_reverts.tsv
 
 datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
@@ -191,12 +192,12 @@ datasets/eswiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/eswiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/eswiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/eswiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/eswiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/eswiki_$(dump_date)_monthly_bot_reverts.tsv
 
 datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
@@ -214,12 +215,12 @@ datasets/zhwiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/zhwiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/zhwiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/zhwiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/zhwiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/zhwiki_$(dump_date)_monthly_bot_reverts.tsv
 
 datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
@@ -237,9 +238,9 @@ datasets/ptwiki_$(dump_date)_reverted_bot2bot.tsv.bz2: \
 	bzip2 -c > \
 	datasets/ptwiki_$(dump_date)_reverted_bot2bot.tsv.bz2
 
-datasets/ptwiki_$(dump_date)_bot_monthly_revert_stats.tsv: \
+datasets/ptwiki_$(dump_date)_monthly_bot_reverts.tsv: \
 		datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 | \
 	python bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170319.tsv > \
-	datasets/ptwiki_$(dump_date)_bot_monthly_revert_stats.tsv
+	datasets/ptwiki_$(dump_date)_monthly_bot_reverts.tsv
