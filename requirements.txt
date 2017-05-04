@@ -4,3 +4,5 @@ mwtypes
 pywikibase
 mwapi
 mwreverts==0.1.5
+pandas
+matplotlib
