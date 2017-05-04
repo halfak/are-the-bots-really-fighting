@@ -6,7 +6,9 @@ RUN apt-get update && \
     apt-get install -y python-dev curl gcc g++ 
     
 ADD requirements.txt requirements.txt
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN $HOME/anaconda2/envs/python3/bin/pip install --upgrade pip && \
+    $HOME/anaconda2/envs/python3/bin/pip install -r requirements.txt
+
 
     
 RUN conda config --add channels r && \
