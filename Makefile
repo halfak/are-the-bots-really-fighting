@@ -1,6 +1,6 @@
-
 dump_date=20170420
-dump_dir="/data/wikipedia/xmldatadumps/public"
+dump_dir=/data/wikipedia/xmldatadumps/public
+python_path=python3
 
 ################################################################################
 ####################      Datasets       #######################################
@@ -39,10 +39,23 @@ monthly_bot_edit_datasets: \
 	datasets/monthly_bot_edits/eswiki_20170427.tsv \
 	datasets/monthly_bot_edits/enwiki_20170427.tsv
 
+notebooks: \
+	analysis/main/0-load-process-data.ipynb \
+	analysis/main/4-1-descriptive-stats.ipynb \
+	analysis/main/4-2-time-to-revert.ipynb \
+	analysis/main/4-3-reverts-per-page-exploratory.ipynb \
+	analysis/main/4-3-reverts-per-page-R-enwiki-plots.ipynb \
+	analysis/main/6-1-comment-parsing.ipynb \
+	analysis/main/6-4-comments-analysis.ipynb \
+
+sample_diffs: \
+	analysis/main/6-2-comments-sample-diffs.ipynb 
+
+
 ############### Bot username datasets ####################
 
 datasets/crosswiki_category_bot_20170328.tsv:
-	python3 get_category_bots.py > datasets/crosswiki_category_bot_20170328.tsv
+	$(python_path) get_category_bots.py > datasets/crosswiki_category_bot_20170328.tsv
 
 datasets/crosswiki_unified_bot_20170328.tsv: \
 		datasets/crosswiki_category_bot_20170328.tsv
@@ -94,7 +107,7 @@ datasets/reverted_bot2bot/enwiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/enwiki_$(dump_date).tsv.bz2
@@ -102,7 +115,7 @@ datasets/reverted_bot2bot/enwiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/enwiki_$(dump_date).tsv: \
 		datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/enwiki_$(dump_date).tsv
 
@@ -117,7 +130,7 @@ datasets/reverted_bot2bot/dewiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/dewiki_$(dump_date).tsv.bz2
@@ -125,7 +138,7 @@ datasets/reverted_bot2bot/dewiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/dewiki_$(dump_date).tsv: \
 		datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/dewiki_$(dump_date).tsv
 
@@ -141,7 +154,7 @@ datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2
@@ -149,7 +162,7 @@ datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/frwiki_$(dump_date).tsv: \
 		datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/frwiki_$(dump_date).tsv
 
@@ -165,7 +178,7 @@ datasets/reverted_bot2bot/jawiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/jawiki_$(dump_date).tsv.bz2
@@ -173,7 +186,7 @@ datasets/reverted_bot2bot/jawiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/jawiki_$(dump_date).tsv: \
 		datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/jawiki_$(dump_date).tsv
 
@@ -188,7 +201,7 @@ datasets/reverted_bot2bot/eswiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/eswiki_$(dump_date).tsv.bz2
@@ -196,7 +209,7 @@ datasets/reverted_bot2bot/eswiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/eswiki_$(dump_date).tsv: \
 		datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/eswiki_$(dump_date).tsv
 
@@ -211,7 +224,7 @@ datasets/reverted_bot2bot/zhwiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/zhwiki_$(dump_date).tsv.bz2
@@ -219,7 +232,7 @@ datasets/reverted_bot2bot/zhwiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv: \
 		datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv
 
@@ -234,7 +247,7 @@ datasets/reverted_bot2bot/ptwiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 \
 		datasets/crosswiki_unified_bot_20170328.tsv
 	bzcat datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 revert_json_2_tsv.py \
+	$(python_path) revert_json_2_tsv.py \
 	  --users datasets/crosswiki_unified_bot_20170328.tsv | \
 	bzip2 -c > \
 	datasets/reverted_bot2bot/ptwiki_$(dump_date).tsv.bz2
@@ -242,6 +255,26 @@ datasets/reverted_bot2bot/ptwiki_$(dump_date).tsv.bz2: \
 datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv: \
 		datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
 	bzcat datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 | \
-	python3 bot_revert_monthly_stats.py \
+	$(python_path) bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv
+
+######### Notebooks #################################
+
+analysis/main/0-load-process-data.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/0-load-process-data.ipynb --output ../main/0-load-process-data.ipynb --ExecutePreprocessor.timeout=-1
+analysis/main/4-1-descriptive-stats.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/4-1-descriptive-stats.ipynb --output ../main/4-1-descriptive-stats.ipynb --ExecutePreprocessor.timeout=-1
+analysis/main/4-2-time-to-revert.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/4-2-time-to-revert.ipynb  --output ../main/4-2-time-to-revert.ipynb  --ExecutePreprocessor.timeout=-1
+analysis/main/4-3-reverts-per-page-exploratory.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/4-3-reverts-per-page-exploratory.ipynb --output ../main/4-3-reverts-per-page-exploratory.ipynb --ExecutePreprocessor.timeout=-1
+analysis/main/4-3-reverts-per-page-R-enwiki-plots.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/4-3-reverts-per-page-R-enwiki-plots.ipynb  --output ../main/4-3-reverts-per-page-R-enwiki-plots.ipynb --ExecutePreprocessor.timeout=-1
+analysis/main/6-1-comment-parsing.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/6-1-comment-parsing.ipynb --output ../main/6-1-comment-parsing.ipynb --ExecutePreprocessor.timeout=-1
+analysis/main/6-4-comments-analysis.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/6-4-comments-analysis.ipynb --output ../main/6-4-comments-analysis.ipynb --ExecutePreprocessor.timeout=-1
+analysis/main/6-2-comments-sample-diffs.ipynb:
+	jupyter nbconvert --to notebook --execute analysis/main_src/6-2-comments-sample-diffs.ipynb --output ../main/6-2-comments-sample-diffs.ipynb --ExecutePreprocessor.timeout=-1
+
