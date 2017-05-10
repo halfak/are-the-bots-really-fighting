@@ -1,0 +1,815 @@
+<a name='fixing double redirect'><h1>fixing double redirect</h1></a>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>reverting_id</th>
+      <th>reverting_user_text</th>
+      <th>rev_user_text</th>
+      <th>reverting_comment</th>
+      <th>diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>712718</th>
+      <td>8548300</td>
+      <td>Botones</td>
+      <td>BOTijo</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT[[José Miguel Insulza Salinas]]<br/>+#REDIRECT[[José Miguel Insulza]]</td>
+    </tr>
+    <tr>
+      <th>696330</th>
+      <td>28262790</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirección [[Sant Boi de Lluçanès]]<br/>+#redirección [[San Baudilio de Llusanés]]</td>
+    </tr>
+    <tr>
+      <th>661275</th>
+      <td>79337589</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Trilogía cinematográfica de El Señor de los Anillos]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Trilogía cinematográfica de El señor de los anillos]]<br/>+#REDIRECCIÓN [[Trilogía cinematográfica de El Señor de los Anillos]]</td>
+    </tr>
+    <tr>
+      <th>716660</th>
+      <td>65476585</td>
+      <td>Xqbot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[El clon (telenovela)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[El Clon (Telenovela)]]<br/>+#REDIRECCIÓN [[El clon (telenovela)]]</td>
+    </tr>
+    <tr>
+      <th>651145</th>
+      <td>58362516</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Cuart de Poblet]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Quart de Poblet]]<br/>+#REDIRECCIÓN [[Cuart de Poblet]]</td>
+    </tr>
+    <tr>
+      <th>656865</th>
+      <td>93913358</td>
+      <td>Invadibot</td>
+      <td>Jembot</td>
+      <td>Bot: arreglo de redirección doble a [[Cretácico superior]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Cretácico Superior]]<br/>+#REDIRECCIÓN [[Cretácico superior]]</td>
+    </tr>
+    <tr>
+      <th>660933</th>
+      <td>94548251</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[Subfusil]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Metralleta]]<br/>+#REDIRECCIÓN [[Subfusil]]</td>
+    </tr>
+    <tr>
+      <th>720977</th>
+      <td>84567335</td>
+      <td>Xqbot</td>
+      <td>タチコマ robot</td>
+      <td>Bot: arreglo de redirección doble a [[Regimiento de Infantería n.º 8 "Tucapel"]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Regimiento de Infantería Nº 8 "Tucapel"]]<br/>+#REDIRECCIÓN [[Regimiento de Infantería n.º 8 "Tucapel"]]</td>
+    </tr>
+    <tr>
+      <th>722471</th>
+      <td>65199175</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Tardigrada]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Tardígrada]]<br/>+#REDIRECCIÓN [[Tardigrada]]</td>
+    </tr>
+    <tr>
+      <th>658089</th>
+      <td>63771742</td>
+      <td>Xqbot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[Instituto Nacional de Estadística y Geografía]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Instituto Nacional de Estadística y Geografía - México]]<br/>+#REDIRECCIÓN [[Instituto Nacional de Estadística y Geografía]]</td>
+    </tr>
+    <tr>
+      <th>677724</th>
+      <td>28371320</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1,3 +1,3 @@\n<br/>-#redirección [[Iniciativa DHARMA#La Orquídea]]<br/>+#redirección [[Iniciativa Dharma#La Orquídea]]<br/> <br/> [[Categoría:Lost|Orquídea, la]]</td>
+    </tr>
+    <tr>
+      <th>662220</th>
+      <td>54706390</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Saddam Hussein]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Sadam Husein]]<br/>+#REDIRECCIÓN [[Saddam Hussein]]</td>
+    </tr>
+    <tr>
+      <th>713565</th>
+      <td>52891496</td>
+      <td>Invadibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot: Arreglando doble redirección → [[Maldá]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Maldà]]<br/>+#REDIRECCIÓN [[Maldá]]</td>
+    </tr>
+    <tr>
+      <th>728173</th>
+      <td>74892683</td>
+      <td>Allanbot</td>
+      <td>Xqbot</td>
+      <td>[[m:mw:PWB|Bot]]: Arreglando doble redirección hacia [[Novak Đoković]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Novak Djokovic]]<br/>+#REDIRECCIÓN [[Novak Đoković]]</td>
+    </tr>
+    <tr>
+      <th>713606</th>
+      <td>8936010</td>
+      <td>Muro Bot</td>
+      <td>Yrbot</td>
+      <td>Bot: Arreglando [[Especial:DoubleRedirects|doble redirección]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Tula (zona arqueológica)]]<br/>+#REDIRECT [[Tollan-Xicocotitlan]]</td>
+    </tr>
+    <tr>
+      <th>708372</th>
+      <td>58740081</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[España en los Juegos Olímpicos de Pekín 2008]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Anexo:España en los Juegos Olímpicos de Pekín 2008]]<br/>+#REDIRECCIÓN [[España en los Juegos Olímpicos de Pekín 2008]]</td>
+    </tr>
+    <tr>
+      <th>651221</th>
+      <td>51726091</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Presidente del Gobierno de Marruecos]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Jefe del Gobierno de Marruecos]]<br/>+#REDIRECCIÓN [[Presidente del Gobierno de Marruecos]]</td>
+    </tr>
+    <tr>
+      <th>656082</th>
+      <td>40895484</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Batalla de Điện Biên Phủ]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Batalla de Dien Bien Phu]]<br/>+#REDIRECCIÓN [[Batalla de Điện Biên Phủ]]</td>
+    </tr>
+    <tr>
+      <th>661127</th>
+      <td>89554840</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Bot: arreglo de redirección doble a [[Telefónica del Perú]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Movistar del Perú]]<br/>+#REDIRECCIÓN [[Telefónica del Perú]]</td>
+    </tr>
+    <tr>
+      <th>665822</th>
+      <td>68265388</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[Antigua Guatemala]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[La Antigua Guatemala]]<br/>+#REDIRECCIÓN [[Antigua Guatemala]]</td>
+    </tr>
+    <tr>
+      <th>654725</th>
+      <td>14608043</td>
+      <td>BOTarate</td>
+      <td>Botones</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Cusco]]<br/>+#REDIRECT [[Cuzco]]</td>
+    </tr>
+    <tr>
+      <th>733522</th>
+      <td>11345955</td>
+      <td>タチコマ robot</td>
+      <td>Muro Bot</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Palacio de LLano Ponte]]<br/>+#REDIRECT [[Palacio de Llano Ponte]]</td>
+    </tr>
+    <tr>
+      <th>722796</th>
+      <td>94718351</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[Pokémon Ruby y Sapphire]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Pokémon Rubí y Zafiro (videojuego)]]<br/>+#REDIRECCIÓN [[Pokémon Ruby y Sapphire]]</td>
+    </tr>
+    <tr>
+      <th>726442</th>
+      <td>12345271</td>
+      <td>タチコマ robot</td>
+      <td>Zwobot</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Icaztegieta]]<br/>+#REDIRECT [[Icazteguieta]]</td>
+    </tr>
+    <tr>
+      <th>652621</th>
+      <td>40391501</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot: Arreglando doble redirección → [[Club Bàsquet Sant Josep Girona]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Girona Fútbol Club (baloncesto)]]<br/>+#REDIRECCIÓN [[Club Bàsquet Sant Josep Girona]]</td>
+    </tr>
+    <tr>
+      <th>738202</th>
+      <td>66406579</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[Distrito de Altenburger Land]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Distrito de Altenburgo]]<br/>+#REDIRECCIÓN [[Distrito de Altenburger Land]]</td>
+    </tr>
+    <tr>
+      <th>671096</th>
+      <td>45972164</td>
+      <td>Xqbot</td>
+      <td>LucienBOT</td>
+      <td>Robot: Arreglando doble redirección → [[Submarino Peral]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Sumergible Peral]]<br/>+#REDIRECCIÓN [[Submarino Peral]]</td>
+    </tr>
+    <tr>
+      <th>708285</th>
+      <td>80487108</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Chus Puras]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Jesús Puras]]<br/>+#REDIRECCIÓN [[Chus Puras]]</td>
+    </tr>
+    <tr>
+      <th>660844</th>
+      <td>76298881</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Selección masculina de voleibol del Perú]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Selección de voleibol del Perú]]<br/>+#REDIRECCIÓN [[Selección masculina de voleibol del Perú]]</td>
+    </tr>
+    <tr>
+      <th>713622</th>
+      <td>90813484</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[Millonarios F. C.]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Millonarios Fútbol Club S. A.]]<br/>+#REDIRECCIÓN [[Millonarios F. C.]]</td>
+    </tr>
+    <tr>
+      <th>706905</th>
+      <td>74992181</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[El sueño]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[El sueño (desambiguación)]]<br/>+#REDIRECCIÓN [[El sueño]]</td>
+    </tr>
+    <tr>
+      <th>651656</th>
+      <td>59915286</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Torneo de Cantón]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Torneo de Guangzhou]]<br/>+#REDIRECCIÓN [[Torneo de Cantón]]</td>
+    </tr>
+    <tr>
+      <th>713761</th>
+      <td>76467971</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Unión, Progreso y Democracia]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Unión Progreso y Democracia]]<br/>+#REDIRECCIÓN [[Unión, Progreso y Democracia]]</td>
+    </tr>
+    <tr>
+      <th>707674</th>
+      <td>59251123</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Estadio Monumental Virgen de Chapi]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Estadio Monumental Arequipa]]<br/>+#REDIRECCIÓN [[Estadio Monumental Virgen de Chapi]]</td>
+    </tr>
+    <tr>
+      <th>672780</th>
+      <td>50510189</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Sale el Sol (canción)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Sale el sol (canción)]]<br/>+#REDIRECCIÓN [[Sale el Sol (canción)]]</td>
+    </tr>
+    <tr>
+      <th>735064</th>
+      <td>74136929</td>
+      <td>Xqbot</td>
+      <td>Allanbot</td>
+      <td>Bot: Arreglando doble redirección → [[Bohemian Club]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[El Club de los Bohemios]]<br/>+#REDIRECCIÓN [[Bohemian Club]]</td>
+    </tr>
+    <tr>
+      <th>723409</th>
+      <td>43181709</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>Robot: Arreglando doble redirección → [[Fútbol Club Barcelona "C"]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirección [[Futbol Club Barcelona "C"]]<br/>+#REDIRECCIÓN [[Fútbol Club Barcelona "C"]]</td>
+    </tr>
+    <tr>
+      <th>652097</th>
+      <td>76983164</td>
+      <td>Invadibot</td>
+      <td>LucienBOT</td>
+      <td>Bot: Arreglando doble redirección → [[Un réquiem alemán]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Réquiem alemán]]<br/>+#REDIRECCIÓN [[Un réquiem alemán]]</td>
+    </tr>
+    <tr>
+      <th>715328</th>
+      <td>22049744</td>
+      <td>BOTarate</td>
+      <td>タチコマ robot</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Kanon de Géminis]]<br/>+#REDIRECT [[Kanon (Saint Seiya)]]</td>
+    </tr>
+    <tr>
+      <th>678860</th>
+      <td>44112137</td>
+      <td>Xqbot</td>
+      <td>AstaBOTh15</td>
+      <td>Robot: Arreglando doble redirección → [[Marussia Virgin]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Virgin Racing]]<br/>+#REDIRECCIÓN [[Marussia Virgin]]</td>
+    </tr>
+    <tr>
+      <th>722809</th>
+      <td>63750331</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Rafa Nadal]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Rafael Nadal]]<br/>+#REDIRECCIÓN [[Rafa Nadal]]</td>
+    </tr>
+    <tr>
+      <th>737309</th>
+      <td>88269463</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Kimigayo]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Himno Nacional de Japón]]<br/>+#REDIRECCIÓN [[Kimigayo]]</td>
+    </tr>
+    <tr>
+      <th>688473</th>
+      <td>68360478</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[Anexo:Reptiles del Paraguay]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Anexo:Reptilia del Paraguay]]<br/>+#REDIRECCIÓN [[Anexo:Reptiles del Paraguay]]</td>
+    </tr>
+    <tr>
+      <th>683280</th>
+      <td>15578701</td>
+      <td>タチコマ robot</td>
+      <td>BOTijo</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Casa de Pilatos (Sevilla)]]<br/>+#REDIRECT [[Casa de Pilatos]]</td>
+    </tr>
+    <tr>
+      <th>651995</th>
+      <td>40759487</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Tercera División de España 2009/10 (Grupo II)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Anexo:Tercera División de España 2009/10 (Grupo II)]]<br/>+#REDIRECCIÓN [[Tercera División de España 2009/10 (Grupo II)]]</td>
+    </tr>
+    <tr>
+      <th>652897</th>
+      <td>11318316</td>
+      <td>Zwobot</td>
+      <td>Further (bot)</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Zimbabwe]]<br/>+#REDIRECT [[Zimbabue]]</td>
+    </tr>
+    <tr>
+      <th>713333</th>
+      <td>24184066</td>
+      <td>ArthurBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Felanich]]<br/>+#REDIRECT [[Felanitx]]</td>
+    </tr>
+    <tr>
+      <th>719713</th>
+      <td>73786494</td>
+      <td>Allanbot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[Peso (moneda de Colombia)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Peso colombiano]]<br/>+#REDIRECCIÓN [[Peso (moneda de Colombia)]]</td>
+    </tr>
+    <tr>
+      <th>724556</th>
+      <td>74610150</td>
+      <td>Allanbot</td>
+      <td>ArthurBot</td>
+      <td>[[m:mw:PWB|Bot]]: Arreglando doble redirección hacia [[Teledoce]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirección [[Teledoce (Uruguay)]]<br/>+#REDIRECCIÓN [[Teledoce]]</td>
+    </tr>
+    <tr>
+      <th>735757</th>
+      <td>62129630</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Alberto Martín]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Alberto Martín (desambiguación)]]<br/>+#REDIRECCIÓN [[Alberto Martín]]</td>
+    </tr>
+    <tr>
+      <th>714523</th>
+      <td>1902950</td>
+      <td>Further (bot)</td>
+      <td>Yrbot</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Combate naval de Angamos]]<br/>+#REDIRECT [[Combate Naval de Angamos]]</td>
+    </tr>
+    <tr>
+      <th>717924</th>
+      <td>94049488</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[Línea C-9 (Cercanías Madrid)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Línea C-9 (Cercanías Madrid) - Ferrocarril Eléctrico del Guadarrama]]<br/>+#REDIRECCIÓN [[Línea C-9 (Cercanías Madrid)]]</td>
+    </tr>
+    <tr>
+      <th>721816</th>
+      <td>91319731</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[E.T.]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[E. T.]]<br/>+#REDIRECCIÓN [[E.T.]]</td>
+    </tr>
+    <tr>
+      <th>661823</th>
+      <td>4142290</td>
+      <td>Eskimbot</td>
+      <td>BotOn</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[SAFC]]<br/>+#REDIRECT [[Sunderland Association Football Club]]</td>
+    </tr>
+    <tr>
+      <th>673214</th>
+      <td>57982343</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[La pareja feliz]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[La Pareja Feliz]]<br/>+#REDIRECCIÓN [[La pareja feliz]]</td>
+    </tr>
+    <tr>
+      <th>691560</th>
+      <td>7549168</td>
+      <td>Botones</td>
+      <td>RebelRobot</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirect[[Estado de Puebla]]<br/>+#redirect[[Puebla]]</td>
+    </tr>
+    <tr>
+      <th>661031</th>
+      <td>48236136</td>
+      <td>Xqbot</td>
+      <td>Rubinbot</td>
+      <td>Robot: Arreglando doble redirección → [[Tasqueña (estación)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Tasqueña]]<br/>+#REDIRECCIÓN [[Tasqueña (estación)]]</td>
+    </tr>
+    <tr>
+      <th>736120</th>
+      <td>62863027</td>
+      <td>AvocatoBot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Bolívar (moneda)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Bolívar (moneda de Venezuela)]]<br/>+#REDIRECCIÓN [[Bolívar (moneda)]]</td>
+    </tr>
+    <tr>
+      <th>728648</th>
+      <td>80999732</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Dawn of the Dead (película de 2004)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Dawn of the dead (película de 2004)]]<br/>+#REDIRECCIÓN [[Dawn of the Dead (película de 2004)]]</td>
+    </tr>
+    <tr>
+      <th>724259</th>
+      <td>48510710</td>
+      <td>AvicBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Min Nan]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirección [[Min Nan (idioma)]]<br/>+#REDIRECT [[Min Nan]]</td>
+    </tr>
+    <tr>
+      <th>686323</th>
+      <td>63994671</td>
+      <td>AvocatoBot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Civilización caral]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Civilización Caral]]<br/>+#REDIRECCIÓN [[Civilización caral]]</td>
+    </tr>
+    <tr>
+      <th>691613</th>
+      <td>7192021</td>
+      <td>BOTijo</td>
+      <td>Botones</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Vímara Pérez]]<br/>+#REDIRECT [[Vimara Pérez]]</td>
+    </tr>
+    <tr>
+      <th>728185</th>
+      <td>81720667</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Novak Djokovic]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Novak Đoković]]<br/>+#REDIRECCIÓN [[Novak Djokovic]]</td>
+    </tr>
+    <tr>
+      <th>713390</th>
+      <td>89947752</td>
+      <td>Xqbot</td>
+      <td>AstaBOTh15</td>
+      <td>Bot: arreglo de redirección doble a [[Acción penal pública]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Delito de acción pública]]<br/>+#REDIRECCIÓN [[Acción penal pública]]</td>
+    </tr>
+    <tr>
+      <th>705701</th>
+      <td>74433595</td>
+      <td>Allanbot</td>
+      <td>AvocatoBot</td>
+      <td>[[m:mw:PWB|Bot]]: Arreglando doble redirección hacia [[Villa Coyoacán]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Antiguo Barrio de Coyoacán]]<br/>+#REDIRECCIÓN [[Villa Coyoacán]]</td>
+    </tr>
+    <tr>
+      <th>714344</th>
+      <td>53141853</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Robot: Arreglando doble redirección → [[Distritos del Perú]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Distritos de Perú]]<br/>+#REDIRECCIÓN [[Distritos del Perú]]</td>
+    </tr>
+    <tr>
+      <th>724173</th>
+      <td>88405398</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Selena (desambiguación)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Selena]]<br/>+#REDIRECCIÓN [[Selena (desambiguación)]]</td>
+    </tr>
+    <tr>
+      <th>703972</th>
+      <td>66696721</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Bashar al-Assad]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Bashar Al-Assad]]<br/>+#REDIRECCIÓN [[Bashar al-Assad]]</td>
+    </tr>
+    <tr>
+      <th>735766</th>
+      <td>76825744</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Aloe karasbergensis]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Aloe striata subsp. karasbergensis]]<br/>+#REDIRECCIÓN [[Aloe karasbergensis]]</td>
+    </tr>
+    <tr>
+      <th>721520</th>
+      <td>42182904</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Hispania Racing]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Hispania Racing F1 Team]]<br/>+#REDIRECCIÓN [[Hispania Racing]]</td>
+    </tr>
+    <tr>
+      <th>696038</th>
+      <td>48511007</td>
+      <td>AvicBot</td>
+      <td>Muro Bot</td>
+      <td>Robot: Arreglando doble redirección → [[Operación triunfo 2001]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Operación Triunfo 2001]]<br/>+#REDIRECT [[Operación triunfo 2001]]</td>
+    </tr>
+    <tr>
+      <th>723137</th>
+      <td>17232379</td>
+      <td>BOTarate</td>
+      <td>タチコマ robot</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Anexo:Campeonato Mundial de Natación en Piscina Corta de 1999]]<br/>+#REDIRECT [[Campeonato Mundial de Natación en Piscina Corta de 1999]]</td>
+    </tr>
+    <tr>
+      <th>659220</th>
+      <td>83756816</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[María Teresa de Saboya-Carignano]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[María Teresa, Princesa de Lamballe]]<br/>+#REDIRECCIÓN [[María Teresa de Saboya-Carignano]]</td>
+    </tr>
+    <tr>
+      <th>684859</th>
+      <td>68436412</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[Civilización Caral]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Civilización caral]]<br/>+#REDIRECCIÓN [[Civilización Caral]]</td>
+    </tr>
+    <tr>
+      <th>712451</th>
+      <td>91934387</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[NSYNC]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [['N Sync]]<br/>+#REDIRECCIÓN [[NSYNC]]</td>
+    </tr>
+    <tr>
+      <th>710670</th>
+      <td>84008567</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Regimiento Reforzado n.º 11 "Caupolicán"]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Regimiento Reforzado Nº 11 "Caupolicán"]]<br/>+#REDIRECCIÓN [[Regimiento Reforzado n.º 11 "Caupolicán"]]</td>
+    </tr>
+    <tr>
+      <th>720608</th>
+      <td>84637618</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Congreso de los Diputados (España)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Congreso de los Diputados de España]]<br/>+#REDIRECCIÓN [[Congreso de los Diputados (España)]]</td>
+    </tr>
+    <tr>
+      <th>721735</th>
+      <td>75454549</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Transformers: La Era de la Extinción]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Transformers: Age of Extinction]]<br/>+#REDIRECCIÓN [[Transformers: La Era de la Extinción]]</td>
+    </tr>
+    <tr>
+      <th>679662</th>
+      <td>16877938</td>
+      <td>タチコマ robot</td>
+      <td>KnightRider</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Campeonato mundial de atletismo de 2005]]<br/>+#REDIRECT [[Campeonato Mundial de Atletismo de 2005]]</td>
+    </tr>
+    <tr>
+      <th>686529</th>
+      <td>23214974</td>
+      <td>Xqbot</td>
+      <td>BOTarate</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Godofredo Guillermo Leibniz]]<br/>+#REDIRECT [[Gottfried Leibniz]]</td>
+    </tr>
+    <tr>
+      <th>660578</th>
+      <td>51335793</td>
+      <td>Xqbot</td>
+      <td>LucienBOT</td>
+      <td>Robot: Arreglando doble redirección → [[San Francisco de Dos Ríos]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[San Francisco de Dos Ríos (Distrito)]]<br/>+#REDIRECCIÓN [[San Francisco de Dos Ríos]]</td>
+    </tr>
+    <tr>
+      <th>662996</th>
+      <td>10001527</td>
+      <td>BOTarate</td>
+      <td>Botones</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Alayor]]<br/>+#REDIRECT [[Alaior]]</td>
+    </tr>
+    <tr>
+      <th>723032</th>
+      <td>69891648</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: Arreglando doble redirección → [[Antonio Velázquez]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Antonio Velázquez (desambiguación)]]<br/>+#REDIRECCIÓN [[Antonio Velázquez]]</td>
+    </tr>
+    <tr>
+      <th>660395</th>
+      <td>43418954</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Bangladés]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Bangladesh]]<br/>+#REDIRECCIÓN [[Bangladés]]</td>
+    </tr>
+    <tr>
+      <th>712470</th>
+      <td>72005679</td>
+      <td>タチコマ robot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Cantón Yaguachi]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Yaguachi (cantón)]]<br/>+#REDIRECCIÓN [[Cantón Yaguachi]]</td>
+    </tr>
+    <tr>
+      <th>715312</th>
+      <td>72316651</td>
+      <td>Allanbot</td>
+      <td>Invadibot</td>
+      <td>Bot: Arreglando doble redirección → [[Ultra alta definición]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Ultraalta definición]]<br/>+#REDIRECCIÓN [[Ultra alta definición]]</td>
+    </tr>
+    <tr>
+      <th>687373</th>
+      <td>62307676</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>Bot: Arreglando doble redirección → [[The Twilight Saga: Breaking Dawn - Part 1]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[La saga crepúsculo: Amanecer Parte 1]]<br/>+#REDIRECCIÓN [[The Twilight Saga: Breaking Dawn - Part 1]]</td>
+    </tr>
+    <tr>
+      <th>652082</th>
+      <td>50950356</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Tucson]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Tucsón]]<br/>+#REDIRECCIÓN [[Tucson]]</td>
+    </tr>
+    <tr>
+      <th>655234</th>
+      <td>88251186</td>
+      <td>Xqbot</td>
+      <td>タチコマ robot</td>
+      <td>Bot: arreglo de redirección doble a [[Alicia en el país de las maravillas (película de 2010)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Alice in Wonderland (película de 2010)]]<br/>+#REDIRECCIÓN [[Alicia en el país de las maravillas (película de 2010)]]</td>
+    </tr>
+    <tr>
+      <th>702856</th>
+      <td>50718438</td>
+      <td>Invadibot</td>
+      <td>Escarbot</td>
+      <td>Robot: Arreglando doble redirección → [[Memoria de solo lectura]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Memoria de sólo lectura]]<br/>+#REDIRECCIÓN [[Memoria de solo lectura]]</td>
+    </tr>
+    <tr>
+      <th>660597</th>
+      <td>14850900</td>
+      <td>BOTarate</td>
+      <td>Muro Bot</td>
+      <td>Robot: Arreglando doble redirección</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Provincia de Santa Elena]]<br/>+#REDIRECT [[Santa Elena (provincia)]]</td>
+    </tr>
+    <tr>
+      <th>661032</th>
+      <td>43297424</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Te Amo (canción de Rihanna)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Te amo (canción de Rihanna)]]<br/>+#REDIRECCIÓN [[Te Amo (canción de Rihanna)]]</td>
+    </tr>
+    <tr>
+      <th>707657</th>
+      <td>94692527</td>
+      <td>Invadibot</td>
+      <td>CEM-bot</td>
+      <td>Bot: arreglo de redirección doble a [[Diputación provincial]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN  [[Diputación provincial]]<br/>+#REDIRECCIÓN [[Diputación provincial]]</td>
+    </tr>
+    <tr>
+      <th>684831</th>
+      <td>93889680</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[Disc-jockey]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Disc jockey]]<br/>+#REDIRECCIÓN [[Disc-jockey]]</td>
+    </tr>
+    <tr>
+      <th>711798</th>
+      <td>43364922</td>
+      <td>AstaBOTh15</td>
+      <td>Xqbot</td>
+      <td>Robot: Arreglando doble redirección → [[Take a Bow (canción de Rihanna)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Take a bow (canción de Rihanna)]]<br/>+#REDIRECCIÓN [[Take a Bow (canción de Rihanna)]]</td>
+    </tr>
+    <tr>
+      <th>680230</th>
+      <td>7872010</td>
+      <td>Botones</td>
+      <td>BOTijo</td>
+      <td>Robot: Fixing double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirect [[Pablo Longueira Montes]]<br/>+#redirect [[Pablo Longueira]]</td>
+    </tr>
+    <tr>
+      <th>693860</th>
+      <td>76438029</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>Bot: arreglo de redirección doble a [[Unión Progreso y Democracia]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Unión, Progreso y Democracia]]<br/>+#REDIRECCIÓN [[Unión Progreso y Democracia]]</td>
+    </tr>
+    <tr>
+      <th>736848</th>
+      <td>93094888</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>Bot: arreglo de redirección doble a [[El príncipe]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[El Príncipe]]<br/>+#REDIRECCIÓN [[El príncipe]]</td>
+    </tr>
+    <tr>
+      <th>724826</th>
+      <td>9140989</td>
+      <td>Muro Bot</td>
+      <td>RebelRobot</td>
+      <td>Bot: Arreglando [[Especial:DoubleRedirects|doble redirección]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Cantón de San Galo]]<br/>+#REDIRECT [[Cantón de Sankt Gallen]]</td>
+    </tr>
+    <tr>
+      <th>706178</th>
+      <td>88150717</td>
+      <td>Xqbot</td>
+      <td>タチコマ robot</td>
+      <td>Bot: arreglo de redirección doble a [[Municipio de Coyotepec (estado de México)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECCIÓN [[Coyotepec (municipio del Estado de México)]]<br/>+#REDIRECCIÓN [[Municipio de Coyotepec (estado de México)]]</td>
+    </tr>
+  </tbody>
+</table>
