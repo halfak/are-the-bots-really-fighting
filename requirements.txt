@@ -1,9 +1,9 @@
-mysqltsv
-docopt
-mwtypes
-pywikibase
-mwapi
+mysqltsv==0.0.7
+docopt==0.6.2
+mwtypes==0.2.0
+pywikibase==0.0.4
+mwapi==0.5.1
 mwreverts==0.1.5
-pandas
-matplotlib
-seaborn
+pandas==0.20.1
+matplotlib==2.0.2
+seaborn==0.7.1
