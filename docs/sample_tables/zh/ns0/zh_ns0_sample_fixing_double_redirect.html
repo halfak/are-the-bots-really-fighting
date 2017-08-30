@@ -1,0 +1,815 @@
+<a name='fixing double redirect'><h1>fixing double redirect</h1></a>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>reverting_id</th>
+      <th>reverting_user_text</th>
+      <th>rev_user_text</th>
+      <th>reverting_comment</th>
+      <th>diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>238038</th>
+      <td>6799476</td>
+      <td>タチコマ robot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[姆斯蒂斯拉夫·罗斯特罗波维奇]]<br/>+#REDIRECT [[姆斯蒂斯拉夫·列奥波尔多维奇·罗斯特罗波维奇]]</td>
+    </tr>
+    <tr>
+      <th>237512</th>
+      <td>17824443</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[灵格斯]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[靈格斯]]<br/>+#REDIRECT [[灵格斯]]</td>
+    </tr>
+    <tr>
+      <th>234448</th>
+      <td>26802933</td>
+      <td>EmausBot</td>
+      <td>タチコマ robot</td>
+      <td>机器人：修正双重重定向至[[范丹戈]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[梵旦哥]]<br/>+#重定向 [[范丹戈]]</td>
+    </tr>
+    <tr>
+      <th>255723</th>
+      <td>42442601</td>
+      <td>Jimmy-bot</td>
+      <td>Xqbot</td>
+      <td>机器人: 修正双重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[圣西门伯爵鲁弗鲁瓦的克劳德·亨利]]<br/>+#REDIRECT [[克勞德·昂列·聖西門]]</td>
+    </tr>
+    <tr>
+      <th>223635</th>
+      <td>33259261</td>
+      <td>タチコマ robot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[费利佩五世]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[腓力五世 (西班牙)]]<br/>+#重定向 [[费利佩五世]]</td>
+    </tr>
+    <tr>
+      <th>241942</th>
+      <td>9123809</td>
+      <td>Xqbot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[九龍官富場]]<br/>+#REDIRECT [[官富場]]</td>
+    </tr>
+    <tr>
+      <th>232602</th>
+      <td>32945499</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>机器人：修正双重重定向至[[臺中文化創意產業園區]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[台中文化創意產業園區]]<br/>+#重定向 [[臺中文化創意產業園區]]</td>
+    </tr>
+    <tr>
+      <th>253820</th>
+      <td>33557491</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[今年的汉字]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[今年之汉字]]<br/>+#重定向 [[今年的汉字]]</td>
+    </tr>
+    <tr>
+      <th>254693</th>
+      <td>30507580</td>
+      <td>Invadibot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[三星Galaxy Tab 10.1]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[Samsung Galaxy Tab 10.1]]<br/>+#重定向 [[三星Galaxy Tab 10.1]]</td>
+    </tr>
+    <tr>
+      <th>226006</th>
+      <td>17696951</td>
+      <td>AvicBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[臺北市行政區劃]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[臺北市行政區域]]<br/>+#REDIRECT [[臺北市行政區劃]]</td>
+    </tr>
+    <tr>
+      <th>226064</th>
+      <td>26610187</td>
+      <td>Sz-iwbot</td>
+      <td>タチコマ robot</td>
+      <td>机器人：修正双重重定向至[[埼玉理想銀行]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[埼玉理索納銀行]]<br/>+#重定向 [[埼玉理想銀行]]</td>
+    </tr>
+    <tr>
+      <th>219368</th>
+      <td>12202586</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向 → [[朝鮮王朝]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[李氏朝鲜]]<br/>+#REDIRECT [[朝鮮王朝]]</td>
+    </tr>
+    <tr>
+      <th>211608</th>
+      <td>30466702</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[假面騎士Faiz 消失的天堂]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[假面騎士555 消失的天堂]]<br/>+#重定向 [[假面騎士Faiz 消失的天堂]]</td>
+    </tr>
+    <tr>
+      <th>206848</th>
+      <td>13940995</td>
+      <td>Xqbot</td>
+      <td>Vina-iwbot</td>
+      <td>機器人:修正雙重重定向 → [[濒危世界遗产列表]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[濒危世界遗产]]<br/>+#REDIRECT [[濒危世界遗产列表]]</td>
+    </tr>
+    <tr>
+      <th>208101</th>
+      <td>10093691</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[朝鲜民族]]<br/>+#REDIRECT [[朝鲜族]]</td>
+    </tr>
+    <tr>
+      <th>219416</th>
+      <td>33557483</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[今年的汉字]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[今年之汉字]]<br/>+#重定向 [[今年的汉字]]</td>
+    </tr>
+    <tr>
+      <th>218500</th>
+      <td>23509882</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[我们永远不会复合]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[絕對絕對分定了]]<br/>+#重定向 [[我们永远不会复合]]</td>
+    </tr>
+    <tr>
+      <th>228528</th>
+      <td>14124493</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[伊格尔·格鲁塞维奇]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[伊戈·古斯域治]]<br/>+#REDIRECT [[伊格尔·格鲁塞维奇]]</td>
+    </tr>
+    <tr>
+      <th>241808</th>
+      <td>18546473</td>
+      <td>タチコマ robot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[秋月级护卫舰 (2010年)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[秋月型护卫舰 (2010年)]]<br/>+#重定向 [[秋月级护卫舰 (2010年)]]</td>
+    </tr>
+    <tr>
+      <th>242863</th>
+      <td>14618040</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>機器人:修正雙重重定向 → [[東鐵綫列車]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[港鐵都城嘉慕電動列車 (交流電)]]<br/>+#REDIRECT [[東鐵綫列車]]</td>
+    </tr>
+    <tr>
+      <th>239731</th>
+      <td>18367433</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[武裝親衛隊]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[武装党卫队]]<br/>+#重定向 [[武裝親衛隊]]</td>
+    </tr>
+    <tr>
+      <th>246234</th>
+      <td>9815686</td>
+      <td>Xqbot</td>
+      <td>Alexbot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[何蜜]]<br/>+#REDIRECT [[灵思何皇后]]</td>
+    </tr>
+    <tr>
+      <th>253484</th>
+      <td>29753116</td>
+      <td>Invadibot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[开尔文]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[開爾文]]<br/>+#重定向 [[开尔文]]</td>
+    </tr>
+    <tr>
+      <th>235718</th>
+      <td>28103131</td>
+      <td>Invadibot</td>
+      <td>タチコマ robot</td>
+      <td>机器人：修正双重重定向至[[星际迷航：暗黑无界]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[闇黑無界：星際爭霸戰]]<br/>+#重定向 [[星际迷航：暗黑无界]]</td>
+    </tr>
+    <tr>
+      <th>240543</th>
+      <td>30151657</td>
+      <td>タチコマ robot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[河洛人 (台灣)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[Hô-ló人 (台灣)]]<br/>+#重定向 [[河洛人 (台灣)]]</td>
+    </tr>
+    <tr>
+      <th>209634</th>
+      <td>16413111</td>
+      <td>Xqbot</td>
+      <td>Alexbot</td>
+      <td>機器人:修正雙重重定向 → [[氢氧根]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[氢氧化物]]<br/>+#REDIRECT [[氢氧根]]</td>
+    </tr>
+    <tr>
+      <th>205408</th>
+      <td>16885979</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[(亻革)家人]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[⿰亻革家人]]<br/>+#REDIRECT [[(亻革)家人]]</td>
+    </tr>
+    <tr>
+      <th>219649</th>
+      <td>13435174</td>
+      <td>Xqbot</td>
+      <td>YurikBot</td>
+      <td>機器人:修正雙重重定向 → [[The Core Pocket Media Player]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Core Media Player]]<br/>+#REDIRECT [[The Core Pocket Media Player]]</td>
+    </tr>
+    <tr>
+      <th>245716</th>
+      <td>42391845</td>
+      <td>Xqbot</td>
+      <td>Sz-iwbot</td>
+      <td>机器人：修正双重重定向至[[JEF聯市原·千葉]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[千葉市原JEF聯]]<br/>+#重定向 [[JEF聯市原·千葉]]</td>
+    </tr>
+    <tr>
+      <th>212875</th>
+      <td>10054425</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[辟水造地]]<br/>+#REDIRECT [[填海]]</td>
+    </tr>
+    <tr>
+      <th>212729</th>
+      <td>34603076</td>
+      <td>Invadibot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[女子落語]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[女子落]]<br/>+#重定向 [[女子落語]]</td>
+    </tr>
+    <tr>
+      <th>232445</th>
+      <td>32741363</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[第一代阿拉曼的蒙哥馬利子爵伯納德·蒙哥馬利]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[伯納德·蒙哥馬利，第一代阿拉曼的蒙哥馬利子爵]]<br/>+#重定向 [[第一代阿拉曼的蒙哥馬利子爵伯納德·蒙哥馬利]]</td>
+    </tr>
+    <tr>
+      <th>207957</th>
+      <td>14775080</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>機器人:修正雙重重定向 → [[東德]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[德意志民主共和国]]<br/>+#REDIRECT [[東德]]</td>
+    </tr>
+    <tr>
+      <th>212820</th>
+      <td>16058718</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[皂荚]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[皂荚树]]<br/>+#REDIRECT [[皂荚]]</td>
+    </tr>
+    <tr>
+      <th>240505</th>
+      <td>31114642</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[楊淑妃 (宋度宗)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[楊巨良]]<br/>+#重定向 [[楊淑妃 (宋度宗)]]</td>
+    </tr>
+    <tr>
+      <th>247816</th>
+      <td>17359198</td>
+      <td>EmausBot</td>
+      <td>タチコマ robot</td>
+      <td>機器人:修正雙重重定向 → [[過海隧道巴士962線]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[過海隧道巴士962系線]]<br/>+#REDIRECT [[過海隧道巴士962線]]</td>
+    </tr>
+    <tr>
+      <th>255084</th>
+      <td>38172978</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[剑桥大学基督圣体学院]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[剑桥大学科珀斯克里斯蒂学院]]<br/>+#重定向 [[剑桥大学基督圣体学院]]</td>
+    </tr>
+    <tr>
+      <th>248176</th>
+      <td>9356438</td>
+      <td>ArthurBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[機動戰士GUNDAM00]]<br/>+#REDIRECT [[機動戰士GUNDAM 00]]</td>
+    </tr>
+    <tr>
+      <th>212340</th>
+      <td>16741055</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[宝山区 (上海市)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[上海市宝山区]]<br/>+#REDIRECT [[宝山区 (上海市)]]</td>
+    </tr>
+    <tr>
+      <th>218490</th>
+      <td>36300627</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[內閣總理大臣 (日本)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[日本內閣總理大臣]]<br/>+#重定向 [[內閣總理大臣 (日本)]]</td>
+    </tr>
+    <tr>
+      <th>248672</th>
+      <td>35918553</td>
+      <td>Invadibot</td>
+      <td>AvocatoBot</td>
+      <td>机器人：修正双重重定向至[[英叻·钦那瓦]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[英樂·欽那瓦]]<br/>+#重定向 [[英叻·钦那瓦]]</td>
+    </tr>
+    <tr>
+      <th>228391</th>
+      <td>29330822</td>
+      <td>EmausBot</td>
+      <td>AvocatoBot</td>
+      <td>机器人：修正双重重定向至[[淡濱尼流浪足球會]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[淡滨尼流浪]]<br/>+#重定向 [[淡濱尼流浪足球會]]</td>
+    </tr>
+    <tr>
+      <th>251873</th>
+      <td>13557257</td>
+      <td>Xqbot</td>
+      <td>TXiKiBoT</td>
+      <td>機器人:修正雙重重定向 → [[宇宙号人造卫星]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[宇宙号系列探测器]]<br/>+#REDIRECT [[宇宙号人造卫星]]</td>
+    </tr>
+    <tr>
+      <th>211335</th>
+      <td>30507598</td>
+      <td>Invadibot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[三星Galaxy Tab 7.0 Plus]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[Samsung Galaxy Tab 7.0 Plus]]<br/>+#重定向 [[三星Galaxy Tab 7.0 Plus]]</td>
+    </tr>
+    <tr>
+      <th>246954</th>
+      <td>28063294</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[加利福尼亞大學美熹德分校]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[美熹德加利福尼亞大學]]<br/>+#重定向 [[加利福尼亞大學美熹德分校]]</td>
+    </tr>
+    <tr>
+      <th>223198</th>
+      <td>10904455</td>
+      <td>Alexbot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[纳迪尔沙赫]]<br/>+#REDIRECT [[纳迪尔沙]]</td>
+    </tr>
+    <tr>
+      <th>244523</th>
+      <td>7053697</td>
+      <td>Alexbot</td>
+      <td>タチコマ robot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[北越急行HK100型電車]]<br/>+#REDIRECT [[北越急行HK100型電力動車組]]</td>
+    </tr>
+    <tr>
+      <th>208148</th>
+      <td>23962915</td>
+      <td>AvocatoBot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[唯讀記憶光碟]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[CD-ROM]]<br/>+#重定向 [[唯讀記憶光碟]]</td>
+    </tr>
+    <tr>
+      <th>218759</th>
+      <td>15855134</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[交通部公路總局]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[中華民國交通部公路總局]]<br/>+#REDIRECT [[交通部公路總局]]</td>
+    </tr>
+    <tr>
+      <th>229404</th>
+      <td>10473792</td>
+      <td>AmphBot</td>
+      <td>タチコマ robot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[阿伦·列农]]<br/>+#REDIRECT [[阿伦·伦农]]</td>
+    </tr>
+    <tr>
+      <th>237498</th>
+      <td>14389625</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[德意志民主共和国]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[東德]]<br/>+#REDIRECT [[德意志民主共和国]]</td>
+    </tr>
+    <tr>
+      <th>206261</th>
+      <td>9772788</td>
+      <td>Alexbot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[千禧線]]<br/>+#REDIRECT [[千禧綫]]</td>
+    </tr>
+    <tr>
+      <th>254452</th>
+      <td>9193938</td>
+      <td>Xqbot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[中華人民共和國全國人民代表大會常務委員會]]<br/>+#REDIRECT [[全国人民代表大会常务委员会]]</td>
+    </tr>
+    <tr>
+      <th>235777</th>
+      <td>12455107</td>
+      <td>Xqbot</td>
+      <td>Alexbot</td>
+      <td>機器人:修正雙重重定向 → [[宋湣公]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[宋湣公 (西周)]]<br/>+#REDIRECT [[宋湣公]]</td>
+    </tr>
+    <tr>
+      <th>239798</th>
+      <td>26314269</td>
+      <td>Sz-iwbot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[東恩納寬量]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[慎善熙]]<br/>+#重定向 [[東恩納寬量]]</td>
+    </tr>
+    <tr>
+      <th>238806</th>
+      <td>35546816</td>
+      <td>Invadibot</td>
+      <td>タチコマ robot</td>
+      <td>机器人：修正双重重定向至[[如心銅鑼灣海景酒店]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[香港銅鑼灣海景酒店]]<br/>+#重定向 [[如心銅鑼灣海景酒店]]</td>
+    </tr>
+    <tr>
+      <th>247807</th>
+      <td>17327737</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>機器人:修正雙重重定向 → [[國家藝廊]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[國家藝廊 (美国)]]<br/>+#REDIRECT [[國家藝廊]]</td>
+    </tr>
+    <tr>
+      <th>205216</th>
+      <td>13800745</td>
+      <td>Xqbot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向 → [[十三个殖民地]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[十三州殖民地]]<br/>+#REDIRECT [[十三个殖民地]]</td>
+    </tr>
+    <tr>
+      <th>213072</th>
+      <td>22951954</td>
+      <td>AvocatoBot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[辽宁号航空母舰]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[瓦良格号航空母舰]]<br/>+#重定向 [[辽宁号航空母舰]]</td>
+    </tr>
+    <tr>
+      <th>247673</th>
+      <td>36412590</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[皇家特工：間諜密令]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[金牌特務]]<br/>+#重定向 [[皇家特工：間諜密令]]</td>
+    </tr>
+    <tr>
+      <th>249756</th>
+      <td>38787688</td>
+      <td>Xqbot</td>
+      <td>AvicBot</td>
+      <td>机器人：修正双重重定向至[[桃園市第一選舉區]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[桃園市第一選舉區 (2008年立法委員)]]<br/>+#重定向 [[桃園市第一選舉區]]</td>
+    </tr>
+    <tr>
+      <th>245410</th>
+      <td>34987870</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[飲尿]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[喝尿]]<br/>+#重定向 [[飲尿]]</td>
+    </tr>
+    <tr>
+      <th>236593</th>
+      <td>14406348</td>
+      <td>EmausBot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向 → [[男性沙文主義]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[大男子主义]]<br/>+#REDIRECT [[男性沙文主義]]</td>
+    </tr>
+    <tr>
+      <th>207626</th>
+      <td>33912614</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[22型导弹快艇]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[022型导弹艇]]<br/>+#重定向 [[22型导弹快艇]]</td>
+    </tr>
+    <tr>
+      <th>205434</th>
+      <td>41759803</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[扬三世·索别斯基]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[扬三世 (波兰)]]<br/>+#重定向 [[扬三世·索别斯基]]</td>
+    </tr>
+    <tr>
+      <th>217445</th>
+      <td>11431879</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向 → [[質能方程]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[质能等价]]<br/>+#REDIRECT [[質能方程]]</td>
+    </tr>
+    <tr>
+      <th>242758</th>
+      <td>31375173</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[2014年昆明火车站暴力恐怖袭击事件]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1,2 +1,2 @@\n<br/>-#重定向 [[2014年昆明火车站袭击事件]]<br/>+#重定向 [[2014年昆明火车站暴力恐怖袭击事件]]<br/> {{别名重定向}}</td>
+    </tr>
+    <tr>
+      <th>218770</th>
+      <td>11254387</td>
+      <td>Xqbot</td>
+      <td>Alexbot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[中國大陸文化]]<br/>+#REDIRECT [[中華人民共和國文化]]</td>
+    </tr>
+    <tr>
+      <th>250346</th>
+      <td>9765851</td>
+      <td>Xqbot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[朱森林 (廣東)]]<br/>+#REDIRECT [[朱森林 (政治人物)]]</td>
+    </tr>
+    <tr>
+      <th>247726</th>
+      <td>14516799</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[港鐵都城嘉慕電動列車 (交流電)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[東鐵綫列車]]<br/>+#REDIRECT [[港鐵都城嘉慕電動列車 (交流電)]]</td>
+    </tr>
+    <tr>
+      <th>231838</th>
+      <td>27122674</td>
+      <td>Invadibot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[维拉·扎苏莉奇]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[薇拉·伊万诺芙娜·查苏利奇]]<br/>+#重定向 [[维拉·扎苏莉奇]]</td>
+    </tr>
+    <tr>
+      <th>237612</th>
+      <td>10182812</td>
+      <td>Alexbot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[香港回歸#中英談判]]<br/>+#REDIRECT [[香港主權移交#中英談判]]</td>
+    </tr>
+    <tr>
+      <th>233756</th>
+      <td>15508915</td>
+      <td>Sz-iwbot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[西部非洲]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[西非]]<br/>+#REDIRECT [[西部非洲]]</td>
+    </tr>
+    <tr>
+      <th>215520</th>
+      <td>22273328</td>
+      <td>Xqbot</td>
+      <td>Liangent-bot</td>
+      <td>机器人：修正双重重定向至[[普拉斯基特星]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[麒麟座V640]]<br/>+#重定向 [[普拉斯基特星]]</td>
+    </tr>
+    <tr>
+      <th>232388</th>
+      <td>33578307</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[风暴战区]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[特種部隊2 Online]]<br/>+#重定向 [[风暴战区]]</td>
+    </tr>
+    <tr>
+      <th>237523</th>
+      <td>19065217</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>機器人:修正雙重重定向 → [[2010年臺北國際花卉博覽會]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[2010臺北國際花卉博覽會]]<br/>+#重定向 [[2010年臺北國際花卉博覽會]]</td>
+    </tr>
+    <tr>
+      <th>244981</th>
+      <td>15606539</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向 → [[2010－2011年突尼斯骚乱]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[2010－2011年突尼西亞反政府示威]]<br/>+#REDIRECT [[2010－2011年突尼斯骚乱]]</td>
+    </tr>
+    <tr>
+      <th>206618</th>
+      <td>11931541</td>
+      <td>Xqbot</td>
+      <td>Alexbot</td>
+      <td>機器人:修正雙重重定向 → [[遙遠的她AMOUR]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[遙遠的她Amour]]<br/>+#REDIRECT [[遙遠的她AMOUR]]</td>
+    </tr>
+    <tr>
+      <th>248251</th>
+      <td>9578311</td>
+      <td>ArthurBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[台灣外省人]]<br/>+#REDIRECT [[外省人]]</td>
+    </tr>
+    <tr>
+      <th>209364</th>
+      <td>23694269</td>
+      <td>Sz-iwbot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[波塞東龍屬]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[海神龍屬]]<br/>+#重定向 [[波塞東龍屬]]</td>
+    </tr>
+    <tr>
+      <th>250291</th>
+      <td>12880334</td>
+      <td>Xqbot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向 → [[墨尔本胜利足球俱乐部]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[墨尔本胜仗足球俱乐部]]<br/>+#REDIRECT [[墨尔本胜利足球俱乐部]]</td>
+    </tr>
+    <tr>
+      <th>210002</th>
+      <td>12719480</td>
+      <td>Xqbot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向 → [[海南话]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[琼文区]]<br/>+#REDIRECT [[海南话]]</td>
+    </tr>
+    <tr>
+      <th>245600</th>
+      <td>34857679</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[卢森堡君主列表]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[卢森堡统治者列表]]<br/>+#重定向 [[卢森堡君主列表]]</td>
+    </tr>
+    <tr>
+      <th>209779</th>
+      <td>33090195</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[中央社会治安综合治理委员会]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[中央社会管理综合治理委员会]]<br/>+#重定向 [[中央社会治安综合治理委员会]]</td>
+    </tr>
+    <tr>
+      <th>236788</th>
+      <td>36445154</td>
+      <td>AvicBot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[朱芷玄]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[陳以庭]]<br/>+#重定向 [[朱芷玄]]</td>
+    </tr>
+    <tr>
+      <th>244087</th>
+      <td>32952740</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[提尔的威廉]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[提尔的纪尧姆]]<br/>+#重定向 [[提尔的威廉]]</td>
+    </tr>
+    <tr>
+      <th>211633</th>
+      <td>22018417</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[棋魂]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[棋靈王]]<br/>+#重定向 [[棋魂]]</td>
+    </tr>
+    <tr>
+      <th>254010</th>
+      <td>16242483</td>
+      <td>Xqbot</td>
+      <td>Sz-iwbot</td>
+      <td>機器人:修正雙重重定向 → [[元惠宗]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[元順帝]]<br/>+#REDIRECT [[元惠宗]]</td>
+    </tr>
+    <tr>
+      <th>212330</th>
+      <td>10564955</td>
+      <td>Alexbot</td>
+      <td>AmphBot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[亚庇市]]<br/>+#REDIRECT [[亞庇]]</td>
+    </tr>
+    <tr>
+      <th>241356</th>
+      <td>33737148</td>
+      <td>EmausBot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[天龙八部角色列表#少林寺]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[天龙八部人物列表#少林寺]]<br/>+#重定向 [[天龙八部角色列表#少林寺]]</td>
+    </tr>
+    <tr>
+      <th>234191</th>
+      <td>15616974</td>
+      <td>EmausBot</td>
+      <td>Sz-iwbot</td>
+      <td>機器人:修正雙重重定向 → [[漢字標準列表]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[漢字字形列表]]<br/>+#REDIRECT [[漢字標準列表]]</td>
+    </tr>
+    <tr>
+      <th>210376</th>
+      <td>10389087</td>
+      <td>ArthurBot</td>
+      <td>Xqbot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Axis Powers Hetalia]]<br/>+#REDIRECT [[義呆利 Axis Powers]]</td>
+    </tr>
+    <tr>
+      <th>254545</th>
+      <td>17902739</td>
+      <td>EmausBot</td>
+      <td>ArthurBot</td>
+      <td>機器人:修正雙重重定向 → [[立法會大樓 (香港)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[香港立法會大樓]]<br/>+#REDIRECT [[立法會大樓 (香港)]]</td>
+    </tr>
+    <tr>
+      <th>236147</th>
+      <td>28850292</td>
+      <td>Invadibot</td>
+      <td>Sz-iwbot</td>
+      <td>机器人：修正双重重定向至[[自衛隊伊拉克復興支援群]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[自衛隊伊拉克派遣]]<br/>+#重定向 [[自衛隊伊拉克復興支援群]]</td>
+    </tr>
+    <tr>
+      <th>207130</th>
+      <td>10775209</td>
+      <td>ArthurBot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[麥士維]]<br/>+#REDIRECT [[麥士維·山度士·施華]]</td>
+    </tr>
+    <tr>
+      <th>237144</th>
+      <td>32025693</td>
+      <td>Xqbot</td>
+      <td>Invadibot</td>
+      <td>机器人：修正双重重定向至[[2013年東亞盃]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[2013年东亚杯足球赛]]<br/>+#重定向 [[2013年東亞盃]]</td>
+    </tr>
+    <tr>
+      <th>254532</th>
+      <td>30507603</td>
+      <td>Invadibot</td>
+      <td>EmausBot</td>
+      <td>机器人：修正双重重定向至[[三星Galaxy Tab 7.7]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[Samsung Galaxy Tab 7.7]]<br/>+#重定向 [[三星Galaxy Tab 7.7]]</td>
+    </tr>
+    <tr>
+      <th>253892</th>
+      <td>7457124</td>
+      <td>タチコマ robot</td>
+      <td>P-bot</td>
+      <td>機器人:修正雙重重定向</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[蘭開郡]]<br/>+#REDIRECT [[兰开夏郡]]</td>
+    </tr>
+    <tr>
+      <th>212142</th>
+      <td>23340514</td>
+      <td>EmausBot</td>
+      <td>AvocatoBot</td>
+      <td>机器人：修正双重重定向至[[无锡5·29事故]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[吴斌 (烈士)]]<br/>+#重定向 [[无锡5·29事故]]</td>
+    </tr>
+    <tr>
+      <th>218489</th>
+      <td>35937185</td>
+      <td>Invadibot</td>
+      <td>Xqbot</td>
+      <td>机器人：修正双重重定向至[[日本內閣總理大臣]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#重定向 [[內閣總理大臣 (日本)]]<br/>+#重定向 [[日本內閣總理大臣]]</td>
+    </tr>
+  </tbody>
+</table>
