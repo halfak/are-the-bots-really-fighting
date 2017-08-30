@@ -1,0 +1,815 @@
+<a name='fixing double redirect'><h1>fixing double redirect</h1></a>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>reverting_id</th>
+      <th>reverting_user_text</th>
+      <th>rev_user_text</th>
+      <th>reverting_comment</th>
+      <th>diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>29303</th>
+      <td>83007912</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare double redirection à [[Liste des digimon]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Liste de digimon]]<br/>+#REDIRECTION [[Liste des digimon]]</td>
+    </tr>
+    <tr>
+      <th>76886</th>
+      <td>68991311</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[Sirius]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Alpha Canis Majoris]]<br/>+#REDIRECT [[Sirius]]</td>
+    </tr>
+    <tr>
+      <th>96291</th>
+      <td>18181320</td>
+      <td>Louperibot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[États-Unis d'Amérique]]<br/>+#REDIRECT [[États-Unis]]</td>
+    </tr>
+    <tr>
+      <th>69860</th>
+      <td>57328704</td>
+      <td>ZéroBot</td>
+      <td>EmausBot</td>
+      <td>Robot: répare double redirection à [[Céramique cupisnique]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Culture cupisnique]]<br/>+#REDIRECTION [[Céramique cupisnique]]</td>
+    </tr>
+    <tr>
+      <th>19452</th>
+      <td>23482082</td>
+      <td>Phe-bot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Directeur de recherche du CNRS]]<br/>+#REDIRECT [[Directeur de recherche au CNRS]]</td>
+    </tr>
+    <tr>
+      <th>44575</th>
+      <td>11630269</td>
+      <td>Phe-bot</td>
+      <td>RebelRobot</td>
+      <td>Robot : corriger double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT[[Quatuor à cordes n° 14 (Beethoven)]]<br/>+#REDIRECT[[Quatuor à cordes n° 14 de Beethoven]]</td>
+    </tr>
+    <tr>
+      <th>46238</th>
+      <td>30492258</td>
+      <td>タチコマ robot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Abydossien]]<br/>+#REDIRECT [[Abydossiens]]</td>
+    </tr>
+    <tr>
+      <th>77862</th>
+      <td>104520042</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Adama Traoré (football)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Adama Traoré (football, 1996)]]<br/>+#REDIRECTION [[Adama Traoré (football)]]</td>
+    </tr>
+    <tr>
+      <th>35064</th>
+      <td>66877629</td>
+      <td>EmausBot</td>
+      <td>Louperibot</td>
+      <td>Robot: répare double redirection à [[Admis à tout prix]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[Admis à tous prix]]<br/>+#REDIRECT [[Admis à tout prix]]</td>
+    </tr>
+    <tr>
+      <th>5839</th>
+      <td>104349051</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Bob l'éponge et ses amis : Un pour tous, tous pour un !]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Nicktoons Unite!]]<br/>+#REDIRECTION [[Bob l'éponge et ses amis : Un pour tous, tous pour un !]]</td>
+    </tr>
+    <tr>
+      <th>96424</th>
+      <td>117196990</td>
+      <td>Xqbot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare une double redirection vers [[Sotchi Autodrome]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Sotchi Autodrom]]<br/>+#REDIRECTION [[Sotchi Autodrome]]</td>
+    </tr>
+    <tr>
+      <th>81404</th>
+      <td>118777197</td>
+      <td>AvicBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Mohammed ben Rachid Al Maktoum]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Mohammed ben Rached Al Maktoum]]<br/>+#REDIRECTION [[Mohammed ben Rachid Al Maktoum]]</td>
+    </tr>
+    <tr>
+      <th>72920</th>
+      <td>47219390</td>
+      <td>ArthurBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[École supérieure de commerce de Paris — Europe]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[ESCP Europe]]<br/>+#redirection [[École supérieure de commerce de Paris — Europe]]</td>
+    </tr>
+    <tr>
+      <th>69763</th>
+      <td>87716303</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare double redirection à [[ESP (Véhicule)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Électrostabilisateur programmé]]<br/>+#REDIRECTION [[ESP (Véhicule)]]</td>
+    </tr>
+    <tr>
+      <th>41569</th>
+      <td>114599619</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[I-Télé]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[ITÉLÉ]]<br/>+#REDIRECTION [[I-Télé]]</td>
+    </tr>
+    <tr>
+      <th>46373</th>
+      <td>30311402</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Anglo-américains (ethnie)]]<br/>+#REDIRECT [[Anglo-Américains (ethnie)]]</td>
+    </tr>
+    <tr>
+      <th>85672</th>
+      <td>105369161</td>
+      <td>HerculeBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[UNAFAM-Union nationale de familles et amis de personnes malades et/ou handicapées psychiques]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Union nationale des amis et familles de malades psychiques]]<br/>+#REDIRECTION [[UNAFAM-Union nationale de familles et amis de personnes malades et/ou handicapées psychiques]]</td>
+    </tr>
+    <tr>
+      <th>34100</th>
+      <td>28890439</td>
+      <td>Louperibot</td>
+      <td>DumZiBoT</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Windows Internet Explorer]]<br/>+#REDIRECT [[Internet Explorer]]</td>
+    </tr>
+    <tr>
+      <th>8710</th>
+      <td>25458263</td>
+      <td>Phe-bot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Elizabeth Bathory]]<br/>+#REDIRECT [[Elizabeth Báthory]]</td>
+    </tr>
+    <tr>
+      <th>72886</th>
+      <td>19230897</td>
+      <td>OKBot</td>
+      <td>FlaBot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Léopard d'or (prix)]]<br/>+#REDIRECT [[Léopard d'or]]</td>
+    </tr>
+    <tr>
+      <th>55257</th>
+      <td>31420643</td>
+      <td>Louperibot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Maison des Jeunes et de la Culture]]<br/>+#REDIRECT [[Maison des jeunes et de la culture]]</td>
+    </tr>
+    <tr>
+      <th>12129</th>
+      <td>57543359</td>
+      <td>Louperibot</td>
+      <td>EmausBot</td>
+      <td>Robot: répare double redirection à [[Associazione Sportiva Rome]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Associazione Sportiva Roma]]<br/>+#REDIRECTION [[Associazione Sportiva Rome]]</td>
+    </tr>
+    <tr>
+      <th>83757</th>
+      <td>18490152</td>
+      <td>Louperibot</td>
+      <td>DorganBot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Woohp]]<br/>+#REDIRECT [[WOOHP]]</td>
+    </tr>
+    <tr>
+      <th>96400</th>
+      <td>126001997</td>
+      <td>JackBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Stade Nilton-Santos]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Stade João Havelange]]<br/>+#REDIRECTION [[Stade Nilton-Santos]]</td>
+    </tr>
+    <tr>
+      <th>42382</th>
+      <td>47219384</td>
+      <td>ArthurBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[École supérieure de commerce de Paris — Europe]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[ESCP Europe]]<br/>+#redirection [[École supérieure de commerce de Paris — Europe]]</td>
+    </tr>
+    <tr>
+      <th>35123</th>
+      <td>74385625</td>
+      <td>VolkovBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare double redirection à [[Power Rangers : Samurai]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Power Rangers Samurai & Power Rangers Super Samurai]]<br/>+#REDIRECTION [[Power Rangers : Samurai]]</td>
+    </tr>
+    <tr>
+      <th>79926</th>
+      <td>62440310</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[Wi-Fi]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Wi-Fi (protocole de communication)]]<br/>+#REDIRECT [[Wi-Fi]]</td>
+    </tr>
+    <tr>
+      <th>28091</th>
+      <td>112459914</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Louis IV du Saint-Empire]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Louis IV (empereur des Romains)]]<br/>+#REDIRECTION [[Louis IV du Saint-Empire]]</td>
+    </tr>
+    <tr>
+      <th>12466</th>
+      <td>54014336</td>
+      <td>ZéroBot</td>
+      <td>Louperibot</td>
+      <td>Robot: répare double redirection à [[Raïs M'Bolhi]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Ouahab Raïs M'Bolhi]]<br/>+#REDIRECTION [[Raïs M'Bolhi]]</td>
+    </tr>
+    <tr>
+      <th>90199</th>
+      <td>68345008</td>
+      <td>EmausBot</td>
+      <td>タチコマ robot</td>
+      <td>Robot: répare double redirection à [[Serveur web]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Serveur Web]]<br/>+#REDIRECT [[Serveur web]]</td>
+    </tr>
+    <tr>
+      <th>29354</th>
+      <td>33751075</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Église de la Chapelle de Bruxelles]]<br/>+#REDIRECT [[Église de la Chapelle]]</td>
+    </tr>
+    <tr>
+      <th>86109</th>
+      <td>92227575</td>
+      <td>AvocatoBot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare une double redirection vers [[Émile Van Averbeke]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Émile van Averbeke]]<br/>+#REDIRECTION [[Émile Van Averbeke]]</td>
+    </tr>
+    <tr>
+      <th>94191</th>
+      <td>110469649</td>
+      <td>HerculeBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Métropole européenne de Lille]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Métropole Européenne de Lille]]<br/>+#REDIRECTION [[Métropole européenne de Lille]]</td>
+    </tr>
+    <tr>
+      <th>52925</th>
+      <td>120673424</td>
+      <td>Xqbot</td>
+      <td>JackBot</td>
+      <td>Robot : répare une double redirection vers [[C'est pas moi, je le jure ! (roman)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[C'est pas moi, je le jure! (roman)]]<br/>+#REDIRECTION [[C'est pas moi, je le jure ! (roman)]]</td>
+    </tr>
+    <tr>
+      <th>82903</th>
+      <td>30311938</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Italo-américains]]<br/>+#REDIRECT [[Italo-Américains]]</td>
+    </tr>
+    <tr>
+      <th>27893</th>
+      <td>80548231</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare double redirection à [[Troll (Usenet et Internet)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Troll (Internet)]]<br/>+#REDIRECTION [[Troll (Usenet et Internet)]]</td>
+    </tr>
+    <tr>
+      <th>74030</th>
+      <td>52696595</td>
+      <td>ZéroBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[Championnat d'Italie de football D2 2008-2009]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[Championnat d'Italie de football Serie B 2008-2009]]<br/>+#REDIRECTION [[Championnat d'Italie de football D2 2008-2009]]</td>
+    </tr>
+    <tr>
+      <th>71575</th>
+      <td>107288901</td>
+      <td>Xqbot</td>
+      <td>AvocatoBot</td>
+      <td>Robot : répare une double redirection vers [[Loi de programmation pour la cohésion sociale]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Loi du 18 janvier 2005 de programmation pour la cohésion sociale]]<br/>+#REDIRECTION [[Loi de programmation pour la cohésion sociale]]</td>
+    </tr>
+    <tr>
+      <th>67625</th>
+      <td>91103864</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Université Paul-Valéry Montpellier 3]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Université Montpellier III Paul Valéry]]<br/>+#REDIRECTION [[Université Paul-Valéry Montpellier 3]]</td>
+    </tr>
+    <tr>
+      <th>93452</th>
+      <td>123141589</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[My Lovely Girl]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Naegen neomu sarangseureowoon geunyeo]]<br/>+#REDIRECTION [[My Lovely Girl]]</td>
+    </tr>
+    <tr>
+      <th>94102</th>
+      <td>72429369</td>
+      <td>VolkovBot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare double redirection à [[Technicien supérieur des études et de l'exploitation de l'aviation civile]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Technicien supérieur l'aviation (fonctionnaire)]]<br/>+#REDIRECTION [[Technicien supérieur des études et de l'exploitation de l'aviation civile]]</td>
+    </tr>
+    <tr>
+      <th>94410</th>
+      <td>123582153</td>
+      <td>HerculeBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Liste de séismes au Québec]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Listes de séismes au Québec]]<br/>+#REDIRECTION [[Liste de séismes au Québec]]</td>
+    </tr>
+    <tr>
+      <th>49243</th>
+      <td>30311911</td>
+      <td>Louperibot</td>
+      <td>RebelRobot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Chronologie de la Guyane française]]<br/>+#REDIRECT [[Histoire de la Guyane]]</td>
+    </tr>
+    <tr>
+      <th>72623</th>
+      <td>117432344</td>
+      <td>Xqbot</td>
+      <td>ZéroBot</td>
+      <td>Robot : répare une double redirection vers [[Évreux Football Club 27]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Évreux athletic club Football]]<br/>+#REDIRECTION [[Évreux Football Club 27]]</td>
+    </tr>
+    <tr>
+      <th>60697</th>
+      <td>83557758</td>
+      <td>Xqbot</td>
+      <td>AvocatoBot</td>
+      <td>Robot : répare double redirection à [[Eurométropole Tour]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Tour de l'Eurométropole]]<br/>+#REDIRECTION [[Eurométropole Tour]]</td>
+    </tr>
+    <tr>
+      <th>63538</th>
+      <td>66991389</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot: répare double redirection à [[Vicenza Calcio]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Vicence Calcio]]<br/>+#REDIRECTION [[Vicenza Calcio]]</td>
+    </tr>
+    <tr>
+      <th>89299</th>
+      <td>116813975</td>
+      <td>HerculeBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Mouloudia Olympique de Constantine]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Mouloudia olympique de Constantine]]<br/>+#REDIRECTION [[Mouloudia Olympique de Constantine]]</td>
+    </tr>
+    <tr>
+      <th>27811</th>
+      <td>18350128</td>
+      <td>Louperibot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Groupe de la Banque mondiale]]<br/>+#REDIRECT [[Banque mondiale]]</td>
+    </tr>
+    <tr>
+      <th>84324</th>
+      <td>113432385</td>
+      <td>Xqbot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare une double redirection vers [[Bibliothèque standard du C]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Bibliothèque standard de C]]<br/>+#REDIRECTION [[Bibliothèque standard du C]]</td>
+    </tr>
+    <tr>
+      <th>32380</th>
+      <td>31890491</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Résultats du championnat d'Europe de football 2000]]<br/>+#REDIRECT [[Championnat d'Europe de football 2000/Résultats]]</td>
+    </tr>
+    <tr>
+      <th>66893</th>
+      <td>24950104</td>
+      <td>タチコマ robot</td>
+      <td>WikiBotas</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Hunter × Hunter : liste des chapitres et épisodes]]<br/>+#REDIRECT [[Liste des chapitres et épisodes de Hunter × Hunter]]</td>
+    </tr>
+    <tr>
+      <th>26998</th>
+      <td>68992386</td>
+      <td>EmausBot</td>
+      <td>AvicBot</td>
+      <td>Robot: répare double redirection à [[Gare de Saillat-Chassenon]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Gare de Saillat - Chassenon]]<br/>+#REDIRECT [[Gare de Saillat-Chassenon]]</td>
+    </tr>
+    <tr>
+      <th>28864</th>
+      <td>107615393</td>
+      <td>HerculeBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Yuriy Cheban]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Yuriy Tcheban]]<br/>+#REDIRECTION [[Yuriy Cheban]]</td>
+    </tr>
+    <tr>
+      <th>50355</th>
+      <td>112328876</td>
+      <td>HerculeBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Ferdinand Ier (empereur des Romains)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1,3 +1,3 @@\n<br/>-#REDIRECTION [[Ferdinand Ier de Habsbourg]]<br/>+#REDIRECTION [[Ferdinand Ier (empereur des Romains)]]<br/> <br/> [[Catégorie:Cacographie (trait d'union)]]</td>
+    </tr>
+    <tr>
+      <th>3614</th>
+      <td>114599642</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[I-Télé]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[ITÉLÉ]]<br/>+#REDIRECTION [[I-Télé]]</td>
+    </tr>
+    <tr>
+      <th>32160</th>
+      <td>29005506</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Liste des seigneurs et Princes de Piémont]]<br/>+#REDIRECT [[Liste des seigneurs et princes de Piémont]]</td>
+    </tr>
+    <tr>
+      <th>76599</th>
+      <td>5151239</td>
+      <td>Eskimbot</td>
+      <td>Gpvosbot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT[[Petit livre rouge]]<br/>+#REDIRECT[[Petit Livre rouge]]</td>
+    </tr>
+    <tr>
+      <th>58031</th>
+      <td>83289180</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare double redirection à [[Oscar (footballeur)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Oscar dos Santos]]<br/>+#REDIRECTION [[Oscar (footballeur)]]</td>
+    </tr>
+    <tr>
+      <th>40626</th>
+      <td>72914096</td>
+      <td>タチコマ robot</td>
+      <td>VolkovBot</td>
+      <td>Robot : répare double redirection à [[Secrétariat d'État à la Santé]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Secrétariat d'État à la Santé (France)]]<br/>+#REDIRECTION [[Secrétariat d'État à la Santé]]</td>
+    </tr>
+    <tr>
+      <th>7469</th>
+      <td>78502334</td>
+      <td>AvicBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare double redirection à [[Vicence Calcio]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Vicenza Calcio]]<br/>+#REDIRECT [[Vicence Calcio]]</td>
+    </tr>
+    <tr>
+      <th>35800</th>
+      <td>16485387</td>
+      <td>Phe-bot</td>
+      <td>Gpvosbot</td>
+      <td>correction double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Gumri]]<br/>+#REDIRECT [[Gyumri]]</td>
+    </tr>
+    <tr>
+      <th>83287</th>
+      <td>27599741</td>
+      <td>タチコマ robot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Serveur web]]<br/>+#REDIRECT [[Serveur Web]]</td>
+    </tr>
+    <tr>
+      <th>64250</th>
+      <td>117940164</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Claude-Emmanuel Luillier, dit Chapelle]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Claude-Emmanuel Lhuillier, dit Chapelle]]<br/>+#REDIRECTION [[Claude-Emmanuel Luillier, dit Chapelle]]</td>
+    </tr>
+    <tr>
+      <th>68380</th>
+      <td>91689013</td>
+      <td>タチコマ robot</td>
+      <td>AvocatoBot</td>
+      <td>Robot : répare double redirection à [[Bataille d'Imenas]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Opération Doro]]<br/>+#REDIRECTION [[Bataille d'Imenas]]</td>
+    </tr>
+    <tr>
+      <th>80965</th>
+      <td>125658238</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Parti Mouvement populaire]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Mouvement populaire (Roumanie)]]<br/>+#REDIRECTION [[Parti Mouvement populaire]]</td>
+    </tr>
+    <tr>
+      <th>27862</th>
+      <td>62134181</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[Mortal Kombat (jeu vidéo, 2011)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Mortal Kombat 2011]]<br/>+#REDIRECTION [[Mortal Kombat (jeu vidéo, 2011)]]</td>
+    </tr>
+    <tr>
+      <th>59519</th>
+      <td>35229665</td>
+      <td>Louperibot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[.dijon//Saiten]]<br/>+#REDIRECT [[.dijon//SAITEN]]</td>
+    </tr>
+    <tr>
+      <th>56264</th>
+      <td>105258500</td>
+      <td>Xqbot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare une double redirection vers [[Associazione Sportiva Roma]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Associazione Sportiva Rome]]<br/>+#REDIRECTION [[Associazione Sportiva Roma]]</td>
+    </tr>
+    <tr>
+      <th>35170</th>
+      <td>102888069</td>
+      <td>Xqbot</td>
+      <td>AvocatoBot</td>
+      <td>Robot : répare une double redirection vers [[Équipe des Îles Vierges des États-Unis de volley-ball]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Équipe des îles Vierges des États-Unis de volley-ball]]<br/>+#REDIRECTION [[Équipe des Îles Vierges des États-Unis de volley-ball]]</td>
+    </tr>
+    <tr>
+      <th>92498</th>
+      <td>74685580</td>
+      <td>VolkovBot</td>
+      <td>ZéroBot</td>
+      <td>Robot : répare double redirection à [[Navigateur web]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Navigateur Web]]<br/>+#REDIRECTION [[Navigateur web]]</td>
+    </tr>
+    <tr>
+      <th>3711</th>
+      <td>12888211</td>
+      <td>Phe-bot</td>
+      <td>Gpvosbot</td>
+      <td>Robot : corriger double redirect</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Cottage]]<br/>+#REDIRECT [[Cottage cheese]]</td>
+    </tr>
+    <tr>
+      <th>26869</th>
+      <td>25458366</td>
+      <td>Phe-bot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Francisco Fernandez-Ochoa]]<br/>+#REDIRECT [[Francisco Fernández-Ochoa]]</td>
+    </tr>
+    <tr>
+      <th>26133</th>
+      <td>76218963</td>
+      <td>タチコマ robot</td>
+      <td>VolkovBot</td>
+      <td>Robot : répare double redirection à [[Culture alternative]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Cultures alternatives]]<br/>+#REDIRECTION [[Culture alternative]]</td>
+    </tr>
+    <tr>
+      <th>24177</th>
+      <td>31886903</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Aldgate]]<br/>+#REDIRECT [[Aldgate (métro de Londres)]]</td>
+    </tr>
+    <tr>
+      <th>12127</th>
+      <td>56264844</td>
+      <td>ZéroBot</td>
+      <td>Louperibot</td>
+      <td>Robot: répare double redirection à [[Associazione Sportiva Rome]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Associazione Sportiva Roma]]<br/>+#REDIRECTION [[Associazione Sportiva Rome]]</td>
+    </tr>
+    <tr>
+      <th>90782</th>
+      <td>107288986</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare une double redirection vers [[Loi relative aux nouvelles régulations économiques]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Loi du 15 mai 2001 relative aux nouvelles régulations économiques]]<br/>+#REDIRECTION [[Loi relative aux nouvelles régulations économiques]]</td>
+    </tr>
+    <tr>
+      <th>44825</th>
+      <td>7734639</td>
+      <td>Eskimbot</td>
+      <td>Gpvosbot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Laboratoire d'Informatique, de Traitement de l'Information et des Systèmes]]<br/>+#REDIRECT [[Laboratoire d'informatique, de traitement de l'information et des sytèmes]]</td>
+    </tr>
+    <tr>
+      <th>59828</th>
+      <td>116191932</td>
+      <td>Xqbot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Société des architectes diplômés de la Ville de Bruxelles]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Société des architectes diplômés de l'académie royale des beaux-arts de Bruxelles]]<br/>+#REDIRECTION [[Société des architectes diplômés de la Ville de Bruxelles]]</td>
+    </tr>
+    <tr>
+      <th>2667</th>
+      <td>86603624</td>
+      <td>タチコマ robot</td>
+      <td>AvocatoBot</td>
+      <td>Robot : répare double redirection à [[Liste des souverains de Belgique]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Roi des belges]]<br/>+#REDIRECTION [[Liste des souverains de Belgique]]</td>
+    </tr>
+    <tr>
+      <th>20043</th>
+      <td>92698483</td>
+      <td>AvocatoBot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Briançon Hockey Élite]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Diables rouges de Briançon]]<br/>+#REDIRECTION [[Briançon Hockey Élite]]</td>
+    </tr>
+    <tr>
+      <th>30020</th>
+      <td>24214896</td>
+      <td>タチコマ robot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Ozërsk]]<br/>+#REDIRECT [[Oziorsk]]</td>
+    </tr>
+    <tr>
+      <th>46138</th>
+      <td>91318834</td>
+      <td>AvocatoBot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare une double redirection vers [[Elle et Lui (film, 1939)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Elle et lui (film, 1939)]]<br/>+#REDIRECTION [[Elle et Lui (film, 1939)]]</td>
+    </tr>
+    <tr>
+      <th>25497</th>
+      <td>66647675</td>
+      <td>EmausBot</td>
+      <td>Louperibot</td>
+      <td>Robot: répare double redirection à [[Communautés autonomes d'Espagne]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[Communautés autonomes espagnoles]]<br/>+#REDIRECT [[Communautés autonomes d'Espagne]]</td>
+    </tr>
+    <tr>
+      <th>12640</th>
+      <td>64291341</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot: répare double redirection à [[Steak]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Bifteck]]<br/>+#REDIRECT [[Steak]]</td>
+    </tr>
+    <tr>
+      <th>32873</th>
+      <td>117627512</td>
+      <td>タチコマ robot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Hôtel de Fontfreyde]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Hôtel Fontfreyde Centre Photographique]]<br/>+#REDIRECTION [[Hôtel de Fontfreyde]]</td>
+    </tr>
+    <tr>
+      <th>92321</th>
+      <td>78292081</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare double redirection à [[Université européenne de Madrid]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Universidad Europea de Madrid]]<br/>+#REDIRECTION [[Université européenne de Madrid]]</td>
+    </tr>
+    <tr>
+      <th>29125</th>
+      <td>80442576</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare double redirection à [[Sweeney Todd : Le Diabolique Barbier de Fleet Street]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Sweeney Todd, le Diabolique Barbier de Fleet Street (film)]]<br/>+#REDIRECTION [[Sweeney Todd : Le Diabolique Barbier de Fleet Street]]</td>
+    </tr>
+    <tr>
+      <th>49004</th>
+      <td>34976270</td>
+      <td>Louperibot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Bao Daï]]<br/>+#REDIRECT [[Bảo Đại]]</td>
+    </tr>
+    <tr>
+      <th>25419</th>
+      <td>78981732</td>
+      <td>JackBot</td>
+      <td>EmausBot</td>
+      <td>Robot: répare double redirection à [[Classe préparatoire aux grandes écoles]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Classe préparatoire aux grandes écoles en France]]<br/>+#REDIRECT [[Classe préparatoire aux grandes écoles]]</td>
+    </tr>
+    <tr>
+      <th>27175</th>
+      <td>81347292</td>
+      <td>Xqbot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection à [[Réseau des grands sites de France]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Réseau des Grands Sites de France]]<br/>+#REDIRECTION [[Réseau des grands sites de France]]</td>
+    </tr>
+    <tr>
+      <th>28099</th>
+      <td>108490428</td>
+      <td>Xqbot</td>
+      <td>EmausBot</td>
+      <td>Robot : répare une double redirection vers [[Louis XVIII]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Louis XVIII de France]]<br/>+#REDIRECTION [[Louis XVIII]]</td>
+    </tr>
+    <tr>
+      <th>33552</th>
+      <td>34976277</td>
+      <td>Louperibot</td>
+      <td>タチコマ robot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Bao Daï]]<br/>+#REDIRECT [[Bảo Đại]]</td>
+    </tr>
+    <tr>
+      <th>82107</th>
+      <td>66714330</td>
+      <td>EmausBot</td>
+      <td>Xqbot</td>
+      <td>Robot: répare double redirection à [[Douze Hommes en colère (film)]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[Douze hommes en colère (film)]]<br/>+#REDIRECT [[Douze Hommes en colère (film)]]</td>
+    </tr>
+    <tr>
+      <th>57289</th>
+      <td>27599753</td>
+      <td>タチコマ robot</td>
+      <td>Phe-bot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Site web]]<br/>+#REDIRECT [[Site Web]]</td>
+    </tr>
+    <tr>
+      <th>32951</th>
+      <td>67294884</td>
+      <td>Xqbot</td>
+      <td>Louperibot</td>
+      <td>Robot: répare double redirection à [[Trinitaires]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Ordre de la Très-Sainte-Trinité pour la rédemption des captifs]]<br/>+#REDIRECTION [[Trinitaires]]</td>
+    </tr>
+    <tr>
+      <th>94068</th>
+      <td>120465688</td>
+      <td>タチコマ robot</td>
+      <td>Xqbot</td>
+      <td>Robot : répare une double redirection vers [[Liste de films tournés dans le département de la Haute-Savoie]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Liste de films tournés en Haute-Savoie]]<br/>+#REDIRECTION [[Liste de films tournés dans le département de la Haute-Savoie]]</td>
+    </tr>
+    <tr>
+      <th>27275</th>
+      <td>68928386</td>
+      <td>EmausBot</td>
+      <td>HerculeBot</td>
+      <td>Robot: répare double redirection à [[Haut Représentant de l'Union pour les affaires étrangères et la politique de sécurité]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#redirection [[Haut Représentant de l’Union pour les affaires étrangères et la politique de sécurité]]<br/>+#REDIRECT [[Haut Représentant de l'Union pour les affaires étrangères et la politique de sécurité]]</td>
+    </tr>
+    <tr>
+      <th>26755</th>
+      <td>113194234</td>
+      <td>Xqbot</td>
+      <td>AvocatoBot</td>
+      <td>Robot : répare une double redirection vers [[Maison de Damas]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Famille de Damas]]<br/>+#REDIRECTION [[Maison de Damas]]</td>
+    </tr>
+    <tr>
+      <th>96422</th>
+      <td>117906472</td>
+      <td>AvicBot</td>
+      <td>HerculeBot</td>
+      <td>Robot : répare une double redirection vers [[Vol 235 TransAsia Airways]]</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECTION [[Vol TransAsia Airways 235]]<br/>+#REDIRECTION [[Vol 235 TransAsia Airways]]</td>
+    </tr>
+    <tr>
+      <th>25357</th>
+      <td>26991791</td>
+      <td>タチコマ robot</td>
+      <td>Louperibot</td>
+      <td>Robot : répare double redirection</td>
+      <td>--- \n<br/>+++ \n<br/>@@ -1 +1 @@\n<br/>-#REDIRECT [[Chevaliers de la Table Ronde]]<br/>+#REDIRECT [[Chevaliers de la Table ronde]]</td>
+    </tr>
+  </tbody>
+</table>
