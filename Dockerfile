@@ -10,4 +10,4 @@ RUN pip install --upgrade pip && \
     pip install -r requirements.txt
     
 USER main
-WORKDIR $HOME/notebooks
+WORKDIR $HOME/analysis/main
