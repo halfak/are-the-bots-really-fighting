@@ -3,7 +3,7 @@ FROM jupyter/datascience-notebook
 USER root
 
 RUN apt-get update && \
-    apt-get install -y python-dev curl gcc g++ xz
+    apt-get install -y python-dev curl gcc g++ xz-utils
     
 ADD requirements.txt requirements.txt
 RUN pip install --upgrade pip && \
