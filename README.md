@@ -4,7 +4,7 @@ This is the code and partial data repository for a paper that has been accepted 
 
 We are releasing our code and data around this research project. This GitHub repository contains our processed data files and various Jupyter notebooks we used to explore and analyze the phenomenon of bot-bot reverts in Wikipedia. Due to data limits, our full source and intermediate data files can't be stored on GitHub, but we have archived them [on Figshare here](https://doi.org/10.6084/m9.figshare.5362216). You can launch this repository now in a free mybinder Jupyter Notebook server by clicking the button below (note that this server is temporary and will expire after an hour or so). All the notebooks in `analysis/main/` can be run in your browser from the mybinder server without any additional setup or data processing. Or if you can open any of the notebooks in the `analysis/` folder in GitHub and see static renderings of the analysis.
 
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/anon-cscw2018-author1/bots-paper-repo-binder)
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/repo/halfak/are-the-bots-really-fighting)
 
 ## Requirements
 Python >=3.3, with the packages:
