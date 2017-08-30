@@ -1,5 +1,6 @@
-# bots-paper-repo
-Anonymous repo for a paper in submission to CSCW 2018. This is an updated repo containing new April 2017 datasets, a reorganized structure, better documentation, and Docker/mybinder support. You can launch this repository now in a free mybinder Jupyter Notebook server by clicking the button below (note that this server is temporary and will expire after an hour or so). All the notebooks in `analysis/main/` can be run in your browser from the mybinder server without any additional setup or data processing. Or if you can open any of the notebooks in the `analysis/` folder in GitHub and see static renderings of the analysis.
+# Operationalizing conflict and cooperation between automated software agents in Wikipedia: A replication and expansion of "Even Good Bots Fight"
+## By R. Stuart Geiger and Aaron Halfaker
+This is the code and partial data repository a paper that has been accepted for publication in Proceedings of the ACM on Human Computer Interaction (November 2017) and will be presented at the ACM conference on Computer-Supported Cooperative Work and Social Computing (CSCW) in 2018. You can launch this repository now in a free mybinder Jupyter Notebook server by clicking the button below (note that this server is temporary and will expire after an hour or so). All the notebooks in `analysis/main/` can be run in your browser from the mybinder server without any additional setup or data processing. Or if you can open any of the notebooks in the `analysis/` folder in GitHub and see static renderings of the analysis.
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/anon-cscw2018-author1/bots-paper-repo-binder)
 
