@@ -2,7 +2,9 @@
 ## By R. Stuart Geiger and Aaron Halfaker
 This is the code and partial data repository for a paper that has been accepted for publication in *Proceedings of the ACM on Human Computer Interaction* (November 2017) and will be presented at the ACM conference on Computer-Supported Cooperative Work and Social Computing (CSCW) in 2018. The paper is exploring the phenomenon of bot-bot reverts in Wikipedia, in which automated software agents undo each other's edits. While previous research raised caution about these cases and used them as evidence for Wikipedia's failure to properly govern automation, our collaborative computational/ethnographic approach explores these cases in rich detail and nuance, asking when it is appropriate to classify bot-bot reverts as conflict or not. We find that an overwhelming proportion of bot-bot reverts are cases in which bots are doing important, productive work that present as reverts due to the ways in which work in Wikipedia is organized.
 
-We are releasing our code and data around this research project. This GitHub repository contains our processed data files and various Jupyter notebooks we used to explore and analyze the phenomenon of bot-bot reverts in Wikipedia. Due to data limits, our full source and intermediate data files can't be stored on GitHub, but we have archived them [on Figshare here](https://doi.org/10.6084/m9.figshare.5362216). You can launch this repository now in a free mybinder Jupyter Notebook server by clicking the button below (note that this server is temporary and will expire after an hour or so). All the notebooks in `analysis/main/` can be run in your browser from the mybinder server without any additional setup or data processing. Or if you can open any of the notebooks in the `analysis/` folder in GitHub and see static renderings of the analysis.
+We are releasing our code and data around this research project. This GitHub repository contains our processed data files and various Jupyter notebooks we used to explore and analyze the phenomenon of bot-bot reverts in Wikipedia. Due to GitHub storage limits, all of our source datasets and intermediate data files can't be stored on GitHub, but we are in the process of archiving them [on Figshare](https://doi.org/10.6084/m9.figshare.5362216). 
+
+If you want to play around with our analyses, you can launch this repository now in a free mybinder JupyterHub server by clicking the button below (note that this server is temporary and will expire after an hour or so). All the notebooks in `analysis/main/` can be run in your browser from the mybinder server without any additional setup or data processing. Or you can open any of the notebooks in the `analysis/` folder in GitHub and see static renderings of the analysis.
 
 [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/repo/halfak/are-the-bots-really-fighting)
 
@@ -18,8 +20,8 @@ install.packages("data.table")
 ```
 Jupyter Notebooks >=4.0 for running notebooks, with the [IRKernel](https://github.com/IRkernel/IRkernel) for the R notebooks.
 
-### Docker container
-Alternatively, use the `Dockerfile` to create a Docker container with all the prerequsites to run the analyses.
+### Computational environment
+The `requirements.txt` file contains the packages and versions used to run the analyses.
 
 ## Datasets
 
