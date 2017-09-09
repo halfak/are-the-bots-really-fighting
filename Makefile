@@ -102,23 +102,23 @@ datasets/monthly_bot_edits/zhwiki_20170427.tsv:
 #	datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/enwiki_$(dump_date)_reverts.00.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232885 >
+	wget -qO- https://ndownloader.figshare.com/files/9232885 > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.00.json.bz2
 
 datasets/reverts/enwiki_$(dump_date)_reverts.01.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232888 >
+	wget -qO- https://ndownloader.figshare.com/files/9232888 > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.01.json.bz2
 
 datasets/reverts/enwiki_$(dump_date)_reverts.02.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232894 >
+	wget -qO- https://ndownloader.figshare.com/files/9232894 > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.02.json.bz2
 
 datasets/reverts/enwiki_$(dump_date)_reverts.03.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232909 >
+	wget -qO- https://ndownloader.figshare.com/files/9232909 > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.03.json.bz2
 
 datasets/reverts/enwiki_$(dump_date)_reverts.04.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232912 >
+	wget -qO- https://ndownloader.figshare.com/files/9232912 > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.04.json.bz2
 
 enwiki_reverts_datasets: \
@@ -179,7 +179,7 @@ datasets/monthly_bot_reverts/dewiki_$(dump_date).tsv: \
 #	datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9237628 >
+	wget -qO- https://ndownloader.figshare.com/files/9237628 > \
 	datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2: \
@@ -207,7 +207,7 @@ datasets/monthly_bot_reverts/frwiki_$(dump_date).tsv: \
 #	datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9237637 >
+	wget -qO- https://ndownloader.figshare.com/files/9237637 > \
 	datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverted_bot2bot/jawiki_$(dump_date).tsv.bz2: \
@@ -234,7 +234,7 @@ datasets/monthly_bot_reverts/jawiki_$(dump_date).tsv: \
 #	datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9237622 >
+	wget -qO- https://ndownloader.figshare.com/files/9237622 > \
 	datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverted_bot2bot/eswiki_$(dump_date).tsv.bz2: \
@@ -261,7 +261,7 @@ datasets/monthly_bot_reverts/eswiki_$(dump_date).tsv: \
 #	datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9237655 >
+	wget -qO- https://ndownloader.figshare.com/files/9237655 > \
 	datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverted_bot2bot/zhwiki_$(dump_date).tsv.bz2: \
@@ -280,12 +280,18 @@ datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv: \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv
 
+#datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2:
+#	mwreverts dump2reverts \
+#	  $(dump_dir)/ptwiki/$(dump_date)/ptwiki-$(dump_date)-stub-meta-history?*.xml.gz \
+#	  --radius 15 --use-sha1 --resort | \
+#	bzip2 -c > \
+#	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
+
 datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2:
-	mwreverts dump2reverts \
-	  $(dump_dir)/ptwiki/$(dump_date)/ptwiki-$(dump_date)-stub-meta-history?*.xml.gz \
-	  --radius 15 --use-sha1 --resort | \
-	bzip2 -c > \
-	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
+        wget -qO- https://ndownloader.figshare.com/files/9237652 > \
+        datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
+
+
 
 datasets/reverted_bot2bot/ptwiki_$(dump_date).tsv.bz2: \
 		datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 \

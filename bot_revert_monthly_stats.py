@@ -6,16 +6,20 @@ Usage:
     bot_revert_monthly_stats.py [--bots=<path>]
 
 Options:
-    -h --help        Prints this documentation
+    -h --help       Prints this documentation
     --bots=<path>   A file containing bot usernames
 """
+import logging
 import json
 import sys
+import traceback
 from collections import defaultdict
 
 import docopt
 import mysqltsv
 from mwtypes import Timestamp
+
+logger = logging.getLogger(__name__)
 
 
 def main():
@@ -35,11 +39,16 @@ def main():
     else:
         bots = None
 
+    logging.basicConfig(
+        level=logging.WARNING,
+        format='%(asctime)s %(levelname)s:%(name)s -- %(message)s'
+    )
+
     writer = mysqltsv.Writer(sys.stdout, headers=HEADINGS)
 
     nmc = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
 
-    for doc in (json.loads(l) for l in sys.stdin):
+    for doc in read_json_lines(sys.stdin):
         reverted_username = doc['reverteds'][-1].get('user', {}).get('text')
         reverting_username = doc['reverting'].get('user', {}).get('text')
         if reverted_username == reverting_username:
@@ -61,6 +70,14 @@ def main():
                           counts['bot_reverts'], counts['bot_reverteds'],
                           counts['bot2bot_reverts']])
 
+
+def read_json_lines(f):
+    for i, l in enumerate(f):
+        try:
+            yield json.loads(l)
+        except Exception as e:
+            logger.error("Failed to process line {0}:".format(i+1))
+            logger.error(traceback.format_exc())
 
 if __name__ == "__main__":
     main()
