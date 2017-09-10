@@ -2,7 +2,8 @@
 dump_date=20170420
 dump_dir="/data/wikipedia/xmldatadumps/public"
 
-mkdir datasets/reverts
+# create datasets/reverts folder 
+$(shell  mkdir -p datasets/reverts)
 
 ################################################################################
 ####################      Datasets       #######################################
