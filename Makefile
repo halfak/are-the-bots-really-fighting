@@ -72,13 +72,19 @@ datasets/crosswiki_unified_bot_20170328.tsv: \
 
 ############### Bot activity ###################
 
+# All datasets of total bot activity for non-en wikis can be found in Quarry. The enwiki query is
+# too long to run on Quarry and was manually run and uploaded to GitHub
+#
 # https://quarry.wmflabs.org/query/18263
 # datasets/monthly_bot_edits/enwiki_20170427.tsv:
 #	wget ???.tsv -qO- > \
 #	datasets/monthly_bot_edits/enwiki_20170427.tsv
-# This dataset was generated using a long-running query
 
 # https://quarry.wmflabs.org/query/18265
+
+datasets/monthly_bot_edits/enwiki_20170427.tsv:
+	wget https://github.com/halfak/are-the-bots-really-fighting/blob/d6a21071397bbde3e3776e388c5b246b0b4b0be6/datasets/monthly_bot_edits/enwiki_20170427.tsv -qO- > \
+	datasets/monthly_bot_edits/enwiki_20170427.tsv
 datasets/monthly_bot_edits/dewiki_20170427.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/0/tsv?download=true -qO- > \
 	datasets/monthly_bot_edits/dewiki_20170427.tsv
