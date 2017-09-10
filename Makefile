@@ -203,7 +203,7 @@ datasets/monthly_bot_reverts/enwiki_$(dump_date).tsv: \
 #	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232567 >
+	wget -qO- https://ndownloader.figshare.com/files/9232567 > \
 	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverted_bot2bot/dewiki_$(dump_date).tsv.bz2: \
