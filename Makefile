@@ -9,11 +9,18 @@ $(shell  mkdir -p datasets/reverts)
 ####################      Datasets       #######################################
 ################################################################################
 
+.PHONY: clean_datasets all
+
+all: \
+	datasets \
+	notebooks
 
 datasets: \
 	reverted_bot2bot_datasets \
 	monthly_bot_revert_datasets \
-	monthly_bot_edit_datasets
+	monthly_bot_edit_datasets \
+	reverts_datasets \
+	parsed_dataframes
 
 reverted_bot2bot_datasets: \
 	datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2 \
@@ -54,6 +61,14 @@ notebooks: \
 	analysis/main/5-3-reverts-per-page.ipynb \
 	analysis/main/7-2-comment-parsing.ipynb \
 	analysis/main/8-comments-analysis.ipynb
+
+clean_datasets:
+	-@rm -f datasets/reverted_bot2bot/*
+	-@rm -f datasets/reverts/*
+	-@rm -f datasets/monthly_bot_reverts/*
+	-@rm -f datasets/monthly_bot_edits/*
+	-@rm -f datasets/parsed_dataframes/*
+	-@rm -f datasets/crosswiki*
 
 
 ############### Bot username datasets ####################
