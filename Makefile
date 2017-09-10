@@ -22,6 +22,19 @@ datasets: \
 	reverts_datasets \
 	parsed_dataframes
 
+reverts_datasets: \
+	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.00.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.01.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.02.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.03.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.04.json.bz2 \
+	datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
+
 reverted_bot2bot_datasets: \
 	datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2 \
 	datasets/reverted_bot2bot/dewiki_$(dump_date).tsv.bz2 \
@@ -48,7 +61,7 @@ monthly_bot_edit_datasets: \
 	datasets/monthly_bot_edits/zhwiki_20170427.tsv \
 	datasets/monthly_bot_edits/eswiki_20170427.tsv \
 	datasets/monthly_bot_edits/enwiki_20170427.tsv
-	
+
 parsed_dataframes: \
 	datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz \
 	datasets/parsed_dataframes/df_all_2016.pickle.xz
