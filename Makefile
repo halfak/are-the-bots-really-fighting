@@ -41,6 +41,20 @@ monthly_bot_edit_datasets: \
 	datasets/monthly_bot_edits/zhwiki_20170427.tsv \
 	datasets/monthly_bot_edits/eswiki_20170427.tsv \
 	datasets/monthly_bot_edits/enwiki_20170427.tsv
+	
+parsed_dataframes: \
+	datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz \
+	datasets/parsed_dataframes/df_all_2016.pickle.xz
+
+notebooks: \
+	analysis/main/0-load-process-data.ipynb \
+	analysis/main/5-1-descriptive-stats.ipynb \
+	analysis/main/5-1-prop-bot-reverts.ipynb \
+	analysis/main/5-2-time-to-revert.ipynb \
+	analysis/main/5-3-reverts-per-page.ipynb \
+	analysis/main/7-2-comment-parsing.ipynb \
+	analysis/main/8-comments-analysis.ipynb
+
 
 ############### Bot username datasets ####################
 
@@ -311,3 +325,39 @@ datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv: \
 	python3 bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv
+
+#############################################################
+######### Parsed dataframes and Jupyter notebooks ###########
+#############################################################
+
+datasets/parsed_dataframes/df_all_2016.pickle.xz: \
+		reverted_bot2bot_datasets
+	jupyter nbconvert --to notebook --execute analysis/main/0-load-process-data.ipynb
+
+datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/7-2-comment-parsing.ipynb
+
+analysis/main/5-1-descriptive-stats.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/5-1-descriptive-stats.ipynb
+
+analysis/main/5-1-prop-bot-reverts.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/5-1-prop-bot-reverts.ipynb
+
+analysis/main/5-2-time-to-revert.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/5-2-time-to-revert.ipynb
+
+analysis/main/5-3-reverts-per-page.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/5-3-reverts-per-page.ipynb
+
+analysis/main/7-2-comment-parsing.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/7-2-comment-parsing.ipynb
+
+analysis/main/8-comments-analysis.ipynb: \
+		datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz
+	jupyter nbconvert --to notebook --execute analysis/main/8-comments-analysis.ipynb
