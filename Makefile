@@ -290,8 +290,8 @@ datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv: \
 #	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2:
-        wget -qO- https://ndownloader.figshare.com/files/9237652 > \
-        datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
+	wget -qO- https://ndownloader.figshare.com/files/9237652 > \
+	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
 
 
 
