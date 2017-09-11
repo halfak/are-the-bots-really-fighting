@@ -2,17 +2,38 @@
 dump_date=20170420
 dump_dir="/data/wikipedia/xmldatadumps/public"
 
-mkdir datasets/reverts
+# create datasets/reverts folder 
+$(shell  mkdir -p datasets/reverts)
 
 ################################################################################
 ####################      Datasets       #######################################
 ################################################################################
 
+.PHONY: clean_datasets all
+
+all: \
+	datasets \
+	notebooks
 
 datasets: \
 	reverted_bot2bot_datasets \
 	monthly_bot_revert_datasets \
-	monthly_bot_edit_datasets
+	monthly_bot_edit_datasets \
+	reverts_datasets \
+	parsed_dataframes
+
+reverts_datasets: \
+	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.00.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.01.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.02.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.03.json.bz2 \
+	datasets/reverts/enwiki_$(dump_date)_reverts.04.json.bz2 \
+	datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2 \
+	datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
 
 reverted_bot2bot_datasets: \
 	datasets/reverted_bot2bot/frwiki_$(dump_date).tsv.bz2 \
@@ -41,6 +62,28 @@ monthly_bot_edit_datasets: \
 	datasets/monthly_bot_edits/eswiki_20170427.tsv \
 	datasets/monthly_bot_edits/enwiki_20170427.tsv
 
+parsed_dataframes: \
+	datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz \
+	datasets/parsed_dataframes/df_all_2016.pickle.xz
+
+notebooks: \
+	analysis/main/0-load-process-data.ipynb \
+	analysis/main/5-1-descriptive-stats.ipynb \
+	analysis/main/5-1-prop-bot-reverts.ipynb \
+	analysis/main/5-2-time-to-revert.ipynb \
+	analysis/main/5-3-reverts-per-page.ipynb \
+	analysis/main/7-2-comment-parsing.ipynb \
+	analysis/main/8-comments-analysis.ipynb
+
+clean_datasets:
+	-@rm -f datasets/reverted_bot2bot/*
+	-@rm -f datasets/reverts/*
+	-@rm -f datasets/monthly_bot_reverts/*
+	-@rm -f datasets/monthly_bot_edits/*
+	-@rm -f datasets/parsed_dataframes/*
+	-@rm -f datasets/crosswiki*
+
+
 ############### Bot username datasets ####################
 
 datasets/crosswiki_category_bot_20170328.tsv:
@@ -57,13 +100,19 @@ datasets/crosswiki_unified_bot_20170328.tsv: \
 
 ############### Bot activity ###################
 
+# All datasets of total bot activity for non-en wikis can be found in Quarry. The enwiki query is
+# too long to run on Quarry and was manually run and uploaded to GitHub
+#
 # https://quarry.wmflabs.org/query/18263
 # datasets/monthly_bot_edits/enwiki_20170427.tsv:
 #	wget ???.tsv -qO- > \
 #	datasets/monthly_bot_edits/enwiki_20170427.tsv
-# This dataset was generated using a long-running query
 
 # https://quarry.wmflabs.org/query/18265
+
+datasets/monthly_bot_edits/enwiki_20170427.tsv:
+	wget https://raw.githubusercontent.com/halfak/are-the-bots-really-fighting/master/datasets/monthly_bot_edits/enwiki_20170427.tsv -qO- > \
+	datasets/monthly_bot_edits/enwiki_20170427.tsv
 datasets/monthly_bot_edits/dewiki_20170427.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/0/tsv?download=true -qO- > \
 	datasets/monthly_bot_edits/dewiki_20170427.tsv
@@ -154,7 +203,7 @@ datasets/monthly_bot_reverts/enwiki_$(dump_date).tsv: \
 #	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2:
-	wget -qO- https://ndownloader.figshare.com/files/9232567 >
+	wget -qO- https://ndownloader.figshare.com/files/9232567 > \
 	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverted_bot2bot/dewiki_$(dump_date).tsv.bz2: \
@@ -290,8 +339,8 @@ datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv: \
 #	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
 
 datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2:
-        wget -qO- https://ndownloader.figshare.com/files/9237652 > \
-        datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
+	wget -qO- https://ndownloader.figshare.com/files/9237652 > \
+	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
 
 
 
@@ -310,3 +359,40 @@ datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv: \
 	python3 bot_revert_monthly_stats.py \
 	  --bots datasets/crosswiki_unified_bot_20170328.tsv > \
 	datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv
+
+#############################################################
+######### Parsed dataframes and Jupyter notebooks ###########
+#############################################################
+
+datasets/parsed_dataframes/df_all_2016.pickle.xz:# \
+#	       reverted_bot2bot_datasets
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/0-load-process-data.ipynb --output 0-load-process-data.ipynb
+
+datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/7-2-comment-parsing.ipynb --output 7-2-comment-parsing.ipynb
+
+analysis/main/5-1-descriptive-stats.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-1-descriptive-stats.ipynb --output 5-1-descriptive-stats.ipynb
+
+analysis/main/5-1-prop-bot-reverts.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-1-prop-bot-reverts.ipynb --output 5-1-prop-bot-reverts.ipynb
+
+analysis/main/5-2-time-to-revert.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-2-time-to-revert.ipynb --output 5-2-time-to-revert.ipynb
+
+analysis/main/5-3-reverts-per-page.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-3-reverts-per-page.ipynb --output 5-3-reverts-per-page.ipynb
+
+analysis/main/7-2-comment-parsing.ipynb: \
+		datasets/parsed_dataframes/df_all_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/7-2-comment-parsing.ipynb --output 7-2-comment-parsing.ipynb
+
+analysis/main/8-comments-analysis.ipynb: \
+		datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/8-comments-analysis.ipynb --output 8-comments-analysis.ipynb
+>>>>>>> f1f07298bc28eaaffcdb9992b17c45e02f726e24
