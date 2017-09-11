@@ -366,32 +366,33 @@ datasets/monthly_bot_reverts/ptwiki_$(dump_date).tsv: \
 
 datasets/parsed_dataframes/df_all_2016.pickle.xz:# \
 #	       reverted_bot2bot_datasets
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/0-load-process-data.ipynb --output analysis/main/0-load-process-data.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/0-load-process-data.ipynb --output 0-load-process-data.ipynb
 
 datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz: \
 		datasets/parsed_dataframes/df_all_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/7-2-comment-parsing.ipynb --output analysis/main/7-2-comment-parsing.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/7-2-comment-parsing.ipynb --output 7-2-comment-parsing.ipynb
 
 analysis/main/5-1-descriptive-stats.ipynb: \
 		datasets/parsed_dataframes/df_all_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-1-descriptive-stats.ipynb --output analysis/main/5-1-descriptive-stats.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-1-descriptive-stats.ipynb --output 5-1-descriptive-stats.ipynb
 
 analysis/main/5-1-prop-bot-reverts.ipynb: \
 		datasets/parsed_dataframes/df_all_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-1-prop-bot-reverts.ipynb --output analysis/main/5-1-prop-bot-reverts.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-1-prop-bot-reverts.ipynb --output 5-1-prop-bot-reverts.ipynb
 
 analysis/main/5-2-time-to-revert.ipynb: \
 		datasets/parsed_dataframes/df_all_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-2-time-to-revert.ipynb --output analysis/main/5-2-time-to-revert.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-2-time-to-revert.ipynb --output 5-2-time-to-revert.ipynb
 
 analysis/main/5-3-reverts-per-page.ipynb: \
 		datasets/parsed_dataframes/df_all_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-3-reverts-per-page.ipynb --output analysis/main/5-3-reverts-per-page.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/5-3-reverts-per-page.ipynb --output 5-3-reverts-per-page.ipynb
 
 analysis/main/7-2-comment-parsing.ipynb: \
 		datasets/parsed_dataframes/df_all_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/7-2-comment-parsing.ipynb --output analysis/main/7-2-comment-parsing.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/7-2-comment-parsing.ipynb --output 7-2-comment-parsing.ipynb
 
 analysis/main/8-comments-analysis.ipynb: \
 		datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/8-comments-analysis.ipynb --output analysis/main/8-comments-analysis.ipynb
+	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/8-comments-analysis.ipynb --output 8-comments-analysis.ipynb
+>>>>>>> f1f07298bc28eaaffcdb9992b17c45e02f726e24
