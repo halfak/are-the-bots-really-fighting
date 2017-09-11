@@ -81,7 +81,7 @@ clean_datasets:
 	-@rm -f datasets/monthly_bot_reverts/*
 	-@rm -f datasets/monthly_bot_edits/*
 	-@rm -f datasets/parsed_dataframes/*
-	-@rm -f datasets/crosswiki*
+#	-@rm -f datasets/crosswiki* # uncomment to rebuild bot lists (will change results)
 
 
 ############### Bot username datasets ####################
