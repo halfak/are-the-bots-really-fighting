@@ -9,7 +9,7 @@ If you want to play around with our analyses, you can launch this repository now
 [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/repo/halfak/are-the-bots-really-fighting)
 
 ## Requirements
-Python >=3.3, with the packages:
+Python >=3.3, with the packages (versions specified in `requirements.txt`):
 ```
 pip install mwcli mwreverts mwtypes mwxml jsonable docopt mysqltsv pandas seaborn
 ```
@@ -18,7 +18,7 @@ R >= 3.2, with the packages:
 install.packages("ggplot2")
 install.packages("data.table")
 ```
-Jupyter Notebooks >=4.0 for running notebooks, with the [IRKernel](https://github.com/IRkernel/IRkernel) for the R notebooks.
+Jupyter Notebooks >=4.0 for running notebooks, with the [IRKernel](https://github.com/IRkernel/IRkernel) for the R notebooks, and [`xz-utils`](https://tukaani.org/xz/) for compression.
 
 ### Computational environment
 The `requirements.txt` file contains the packages and versions used to run the analyses.
@@ -35,7 +35,7 @@ We have two datasets of bots across language versions of Wikipedia:
 Note that if you re-run these scripts and generate new bot lists, they will likely be different than the ones we used for our analysis, as Wikipedians are continually updating these source bot lists. So if you generate new bot lists then re-run our addition data collection, processing, and analysis pipeline, you may get slighly different results, because you will be using a different list of bot accounts.
 
 ### 1. Database dumps of Wikimedia edit metadata
-This project begins with the the stub-meta-history.xml.gz [database dumps](https://dumps.wikimedia.org] from the Wikimedia Foundation, which contain metadata for every edit made to every page in particular language versions of Wikipedia (see [here](https://meta.wikimedia.org/wiki/Data_dumps/Dump_format) for details about the dumps). The BASH script we used to download the April 20th, 2017 database dumps from the Wikimedia Foundation's servers is `download_dumps.sh`. However, Wikimedia takes down database dumps after about six months, and so the files we used are no longer accessible using this script. We include it for purposes of computational reproducibility, and the script can be modified to download newer database dumps for future research. We have also archived the April 20th, 2017 database dumps we used at the California Digital Library's [DASH project](https://doi.org/10.6078/D1FD3K) -- you must enter your e-mail and DASH will send you a link to download it.
+This project begins with the the stub-meta-history.xml.gz [database dumps](https://dumps.wikimedia.org) from the Wikimedia Foundation, which contain metadata for every edit made to every page in particular language versions of Wikipedia (see [here](https://meta.wikimedia.org/wiki/Data_dumps/Dump_format) for details about the dumps). The BASH script we used to download the April 20th, 2017 database dumps from the Wikimedia Foundation's servers is `download_dumps.sh`. However, Wikimedia takes down database dumps after about six months, and so the files we used are no longer accessible using this script. We include it for purposes of computational reproducibility, and the script can be modified to download newer database dumps for future research. We have also archived the April 20th, 2017 database dumps we used at the California Digital Library's [DASH project](https://doi.org/10.6078/D1FD3K) -- you must enter your e-mail and DASH will send you a link to download it.
 
 Note that these files are large -- approximately 93GB compressed -- and on a 16 core Xeon workstation, it can take a week for the first stage of parsing all reverts from the dumps. As we are not taking issue with how previous researchers have computationally identified reverts (only how to interpret reverts as conflict), replicating this step is not crucial. We recommend those interested in replication start with the bot-bot revert datasets, described below.
 
