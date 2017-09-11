@@ -5,6 +5,9 @@ dump_dir="/data/wikipedia/xmldatadumps/public"
 # create datasets/reverts folder 
 $(shell  mkdir -p datasets/reverts)
 
+# install dependencies
+$(shell pip3 install -r requirements.txt)
+
 ################################################################################
 ####################      Datasets       #######################################
 ################################################################################
