@@ -111,7 +111,7 @@ datasets/crosswiki_unified_bot_20170328.tsv: \
 # https://quarry.wmflabs.org/query/18265
 
 datasets/monthly_bot_edits/enwiki_20170427.tsv:
-	wget https://github.com/halfak/are-the-bots-really-fighting/blob/d6a21071397bbde3e3776e388c5b246b0b4b0be6/datasets/monthly_bot_edits/enwiki_20170427.tsv -qO- > \
+	wget https://raw.githubusercontent.com/halfak/are-the-bots-really-fighting/master/datasets/monthly_bot_edits/enwiki_20170427.tsv -qO- > \
 	datasets/monthly_bot_edits/enwiki_20170427.tsv
 datasets/monthly_bot_edits/dewiki_20170427.tsv:
 	wget https://quarry.wmflabs.org/run/171700/output/0/tsv?download=true -qO- > \
