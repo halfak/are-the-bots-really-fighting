@@ -395,4 +395,3 @@ analysis/main/7-2-comment-parsing.ipynb: \
 analysis/main/8-comments-analysis.ipynb: \
 		datasets/parsed_dataframes/df_all_comments_parsed_2016.pickle.xz
 	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --to notebook --execute analysis/main/8-comments-analysis.ipynb --output 8-comments-analysis.ipynb
->>>>>>> f1f07298bc28eaaffcdb9992b17c45e02f726e24
