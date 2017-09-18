@@ -867,7 +867,7 @@ Computing Machinery]
   \def\@journalName{ACM J. Comput. Cult. Herit.}%
 \or % PACMHCI
   \def\@journalName{Proceedings of the ACM on Human-Computer Interaction}%
-  \def\@journalName{Proceedings of the ACM on Human-Computer Interaction}%
+  \def\@journalName{Proc. ACM Hum.-Comput. Interact.}%
   \def\@permissionCodeOne{2573-0142}%
   \@ACM@screentrue
   \PackageInfo{\@classname}{Using screen mode due to \@journalCode}%
@@ -1366,7 +1366,7 @@ Computing Machinery]
   Copyright held by the owner/author(s). Publication rights licensed to
   Association for Computing Machinery.
   \or % rightsretained
-  %Copyright held by the owner/author(s). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+  Copyright held by the owner/author(s).
   \or % usgov
   \or % usgovmixed
   Association for Computing Machinery.
@@ -1415,7 +1415,7 @@ Computing Machinery]
    and\hspace*{.5pt}/or  a fee. Request permissions from
    permissions@acm.org.
   \or % rightsretained
-   This work is \copyright 2017 by the authors and is freely licensed under the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons International Attribution 4.0 license (CC-BY 4.0)}. You are free to share and adapt this article freely, provided you also attribute the authors. The authors have also given a non-exclusive license to the Association for Computing Machinery for publication in the ACM Digital Library.
+  This article is licensed under the Creative Commons Attribution 4.0 International license (CC BY 4.0). You are free to share and adapt this work, provided you attribute the authors and leave this copyright notice intact.
   \or % usgov
    This paper is authored by an employee(s) of the United States
    Government and is in the public domain. Non-exclusive copying or
@@ -1562,9 +1562,9 @@ Computing Machinery]
        \fi
     \fi
     \if@printcopyright
-     % \copyright\ \@copyrightyear\ \@copyrightowner\\
+      \copyright\ \@copyrightyear\ \@copyrightowner\\
     \else
-     %\@copyrightyear.\
+     \@copyrightyear.\
     \fi
     \if@ACM@manuscript
       Manuscript submitted to ACM\\
@@ -1585,9 +1585,9 @@ Computing Machinery]
           \fi\\
         \else
           \if@ACM@journal
-            %\@permissionCodeOne/\@acmYear/\@acmMonth-ART\@acmArticle
-            %\ifx\@acmPrice\@empty\else\ \$\@acmPrice\fi\\
-            %\@formatdoi{\@acmDOI}%
+            \@permissionCodeOne/\@acmYear/\@acmMonth-ART\@acmArticle
+            \ifx\@acmPrice\@empty\else\ \$\@acmPrice\fi\\
+            \@formatdoi{\@acmDOI}%
           \else % Conference
             \ifx\@acmISBN\@empty\else ACM~ISBN~\@acmISBN
             \ifx\@acmPrice\@empty.\else\dots\$\@acmPrice\fi\\\fi
@@ -1606,7 +1606,7 @@ Computing Machinery]
    \fi
    \ifx\@keywords\@empty\else\bgroup
       {\if@ACM@journal
-         \@specialsection{\textbf{Additional Key Words and Phrases}}%
+         \@specialsection{Additional Key Words and Phrases}%
        \else
          \@specialsection{Keywords}%
        \fi
@@ -1617,9 +1617,7 @@ Computing Machinery]
   \global\let\authors=\authors
   \global\let\shortauthors=\shortauthors
   \if@ACM@printacmref
-     %\@mkbibcitation
-     \par\medskip\small\noindent{\bfseries ACM Reference Format:}\par\nobreak
-\noindent R. Stuart Geiger and Aaron Halfaker. 2017. ``Operationalizing conflict and cooperation between automated software agents in Wikipedia: A replication and expansion of `Even Good Bots Fight.''' \textit{Proceedings of the ACM on Human-Computer Interaction} (Nov 2017 issue, CSCW 2018 Online First) 1, 2, Article 49. 33 pages. DOI:\url{https://doi.org/10.1145/3134684}. \url{https://commons.wikimedia.org/wiki/File:conflict-bots-wp-cscw.pdf}.
+     \@mkbibcitation
   \fi
   \hypersetup{pdfauthor={\authors},
     pdftitle={\@title},
@@ -2072,9 +2070,6 @@ Computing Machinery]
     \else
       \section*{Abstract}%
     \fi
-    %\vspace{.01cm}
-    \hrule 
-    \vspace{.25cm}
    \ignorespaces\@abstract\par}%
   \fi\egroup}
 \def\@mkbibcitation{\bgroup
@@ -2090,8 +2085,8 @@ Computing Machinery]
   \noindent\authors. \@acmYear. \@title
   \ifx\@subtitle\@empty. \else: \@subtitle. \fi
   \if@ACM@journal
-     \textit{\@journalNameShort} (Nov 2017 issue, CSCW 2018 Online First)
-     \@acmVolume, \@acmNumber \@article@string.
+     \textit{\@journalNameShort}
+     \@acmVolume, \@acmNumber \@article@string (\@acmPubDate),
      \ref{TotPages}~\@pages@word.
   \else
      In \textit{\@acmBooktitle}%
@@ -2101,7 +2096,7 @@ Computing Machinery]
      ACM, New York, NY, USA%
        \@article@string\unskip, \ref{TotPages}~\@pages@word.
   \fi
-  DOI:\href{https://doi.org/10.1145/3134684}{https://doi.org/10.1145/3134684}. \url{https://commons.wikimedia.org/wiki/File:conflict-bots-wp-cscw.pdf} 
+  \@formatdoi{\@acmDOI}
 \par\egroup}
 \def\@printendtopmatter{\par\bigskip}
 \def\@setthanks{\long\def\thanks##1{\par##1\@addpunct.}\thankses}
