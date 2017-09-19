@@ -1,3 +1,5 @@
 dependencies:
   - curl
   - xz
+  - r-irkernel
+  - r-ggplot2

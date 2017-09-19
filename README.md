@@ -21,7 +21,7 @@ install.packages("data.table")
 Jupyter Notebooks >=4.0 for running notebooks, with the [IRKernel](https://github.com/IRkernel/IRkernel) for the R notebooks, and [`xz-utils`](https://tukaani.org/xz/) for compression.
 
 ### Computational environment
-The `requirements.txt` file contains the packages and versions used to run the analyses.
+The `Dockerfile` contains specifications for a standardized docker container with all the packages needed to run the analyses (including Jupyter notebooks). For python packages, the `Dockerfile` pulls from `requirements.txt`, which specifies version numbers.
 
 ## Datasets
 
