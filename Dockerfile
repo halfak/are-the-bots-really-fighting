@@ -11,4 +11,6 @@ COPY requirements.txt ./
 RUN pip install --upgrade pip \
     && pip install -r requirements.txt
     
+RUN echo "install.packages(c('data.table', 'ggplot2'))" | R --no-save
+
 COPY . /home/$NB_USER/
