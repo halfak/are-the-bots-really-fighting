@@ -14,3 +14,9 @@ RUN pip install --upgrade pip \
 RUN echo "install.packages(c('data.table', 'ggplot2'), repos = 'http://cran.us.r-project.org')" | R --no-save
 
 COPY . /home/$NB_USER/
+
+USER root
+
+RUN chown -R $NB_USER /home/$NB_USER/
+
+USER $NB_USER
