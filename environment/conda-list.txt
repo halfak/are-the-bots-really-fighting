@@ -132,8 +132,8 @@ mpmath                    0.19                     py35_1
 multipledispatch          0.4.9                    py35_0  
 mwapi                     0.5.1                     <pip>
 mwcli                     0.0.2                     <pip>
-mwreverts                 0.1.3                     <pip>
 mwreverts                 0.1.5                     <pip>
+mwreverts                 0.1.3                     <pip>
 mwtypes                   0.2.0                     <pip>
 mwxml                     0.2.2                     <pip>
 mysqltsv                  0.0.7                     <pip>
@@ -176,8 +176,8 @@ pep8                      1.7.0                    py35_0
 pexpect                   4.2.1                    py35_0  
 pickleshare               0.7.4                    py35_0  
 pillow                    4.1.1                    py35_0  
-pip                       9.0.1                    py35_1  
 pip                       9.0.1                     <pip>
+pip                       9.0.1                    py35_1  
 pixman                    0.34.0                        0  
 pkginfo                   1.4.1                    py35_0  
 ply                       3.10                     py35_0  
@@ -277,8 +277,8 @@ tk                        8.5.18                        0
 toolz                     0.8.2                    py35_0  
 tornado                   4.5                       <pip>
 tornado                   4.5.1                    py35_0  
-traitlets                 4.3.2                     <pip>
 traitlets                 4.3.2                    py35_0  
+traitlets                 4.3.2                     <pip>
 tweepy                    3.5.0                     <pip>
 unicodecsv                0.14.1                   py35_0  
 uritemplate               3.0.0                     <pip>
