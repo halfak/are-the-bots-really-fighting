@@ -1,7 +1,7 @@
 dependencies:
   - curl=7.52.1
   - xz=5.2.2
-  - r-irkernel=0.8.9
+  - r-irkernel
   - r-ggplot2=2.2.1
   - r-data.table=1.10.4
   - pip: 
