@@ -1,4 +1,7 @@
 # Operationalizing conflict and cooperation between automated software agents in Wikipedia: A replication and expansion of "Even Good Bots Fight"
+
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/halfak/are-the-bots-really-fighting/master)
+
 ## By R. Stuart Geiger and Aaron Halfaker
 This is the code and partial data repository for [a paper](https://upload.wikimedia.org/wikipedia/commons/f/f4/Operationalizing-conflict-bots-wikipedia-cscw-preprint.pdf) that has been accepted for publication in *Proceedings of the ACM on Human Computer Interaction* (November 2017) and will be presented at the ACM conference on Computer-Supported Cooperative Work and Social Computing (CSCW) in 2018. The paper is exploring the phenomenon of bot-bot reverts in Wikipedia, in which automated software agents undo each other's edits. While previous research raised caution about these cases and used them as evidence for Wikipedia's failure to properly govern automation, our collaborative computational/ethnographic approach explores these cases in rich detail and nuance, asking when it is appropriate to classify bot-bot reverts as conflict or not. We find that an overwhelming proportion of bot-bot reverts are cases in which bots are doing important, productive work that present as reverts due to the ways in which work in Wikipedia is organized.
 
@@ -6,7 +9,7 @@ We are releasing our code and data around this research project. This GitHub rep
 
 If you want to play around with our analyses, you can launch this repository now in a free mybinder JupyterHub server by clicking the button below (note that this server is temporary and will expire after an hour or so). All the notebooks in `analysis/main/` can be run in your browser from the mybinder server without any additional setup or data processing. Or you can open any of the notebooks in the `analysis/` folder in GitHub and see static renderings of the analysis.
 
-[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/repo/halfak/are-the-bots-really-fighting)
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/halfak/are-the-bots-really-fighting/master)
 
 ## Requirements
 Python >=3.3, with the packages (versions specified in `requirements.txt`):
