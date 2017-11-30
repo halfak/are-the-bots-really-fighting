@@ -24,7 +24,7 @@ install.packages("data.table")
 Jupyter Notebooks >=4.0 for running notebooks, with the [IRKernel](https://github.com/IRkernel/IRkernel) for the R notebooks, and [`xz-utils`](https://tukaani.org/xz/) for compression.
 
 ### Computational environment
-The `Dockerfile` contains specifications for a standardized docker container with all the packages needed to run the analyses (including Jupyter notebooks). This builds upon the [`jupyter/datascience-notebook`](https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook) Dockerfile. Conda and pip are used for package management. For python packages, the `Dockerfile` pulls from `requirements.txt`, which specifies required version numbers. 
+The `environment.yml` file contains specifications for a standardized [conda](https://conda.io/docs/) environment (see also [Anaconda](http://anaconda.org)), with packages needed to run the analyses (including Jupyter notebooks). A Dockerfile is available at `Dockerfile.old` (named to avoid incompatibilities with mybinder.org), which is based on the [`jupyter/datascience-notebook`](https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook) Dockerfile.  For python packages, there is also a `requirements.txt`, which specifies required version numbers. 
 
 The folder `/environment/` contains a Jupyter notebook displaying various information about one of the computational environments that this pipeline was run using, as well as the outputs of `pip freeze`, `conda list` and `conda env export`. Note that this environment has installed far more packages than are needed to run this project.
 
