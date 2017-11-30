@@ -1,9 +1,9 @@
 dependencies:
-  - curl
-  - xz
-  - r-irkernel
-  - r-ggplot2
-  - r-data.table
+  - curl=7.52.1
+  - xz=5.2.2
+  - r-irkernel=0.8.9
+  - r-ggplot2=2.2.1
+  - r-data.table=1.10.4
   - pip: 
      - mysqltsv==0.0.7
      - docopt==0.6.2
